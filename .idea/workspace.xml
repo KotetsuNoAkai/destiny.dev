@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68bcb9b0-a836-4441-9c7d-5e8c51e97c05" name="Default" comment="Backend Controller:&#10;&#10;En NewAction y editAction funcionan al 100%, permiten subir archivos y se renderizan de manera independiente cada imput del formulario. Al terminar de crear, te redirecciona a editAction.&#10;&#10;editCreate.html.twig:&#10;&#10;Vista unica para editar y crear elementos. Los mensajes son diferentes si estamos en editAction y newAction.&#10;&#10;Creado el servicio:&#10;&#10;Idiomas-&gt; encargado de crear el formulario y de generar una nuevo objeto, para la creacion de elementos.&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/common/img/lang/en.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/common/img/lang/es.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/common/img/lang/sw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/includes/backendMenuLeft.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/common/css/modal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/asset/backend/css/dashboard.css" afterPath="$PROJECT_DIR$/web/asset/backend/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="destiny.dev.iws" />
@@ -440,7 +427,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427461764934</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Backend Controller:&#10;&#10;En NewAction y editAction funcionan al 100%, permiten subir archivos y se renderizan de manera independiente cada imput del formulario. Al terminar de crear, te redirecciona a editAction.&#10;&#10;editCreate.html.twig:&#10;&#10;Vista unica para editar y crear elementos. Los mensajes son diferentes si estamos en editAction y newAction.&#10;&#10;Creado el servicio:&#10;&#10;Idiomas-&gt; encargado de crear el formulario y de generar una nuevo objeto, para la creacion de elementos.&#10;&#10;">
+      <created>1427490799018</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1427490799018</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">

@@ -108,3 +108,11 @@ body {
     display: inline-block;
     border-radius: 50%;
 }
+
+.element-active {
+    color: green;
+}
+
+.element-disabled {
+    color: red;
+}

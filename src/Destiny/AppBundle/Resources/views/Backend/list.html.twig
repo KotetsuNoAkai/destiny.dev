@@ -1,0 +1,95 @@
+{% extends "DestinyAppBundle::backendBase.html.twig" %}
+
+    {% block backendTitle %}
+        {{ entity | capitalize }}
+        <a class="btn btn-success pull-right" href="{{ path('createBackend',{'entity':entity}) }}">
+            <i class="fa fa-plus-circle"></i>
+
+            Nuevo idioma
+        </a>
+    {% endblock %}
+
+{% block backendBody %}
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <td>#</td>
+            <td>Nombre</td>
+            <td>Bandera</td>
+            <td>Defecto</td>
+            <td>Ultima modificacion</td>
+            <td>Estado</td>
+            <td>Editar</td>
+            <td>Borrar</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for element in list %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>
+                    <a href="{{ path('editBackend',{'entity':entity,'element':element.slug}) }}">
+                        {{ element }}
+                    </a>
+                </td>
+                <td><img src="{{ asset(element.webPath) }}"></td>
+                <td>
+                    {% if element.defecto == true %}
+                        <i class="fa fa-check element-active"></i>
+                    {% else %}
+                        <i class="fa fa-ban element-disabled"></i>
+                    {% endif %}
+                </td>
+                <td>{{ element.fechaModificacion | date ('d/m/y d:i') }}</td>
+                <td>
+                    {% if element.estado == true %}
+                        <i class="fa fa-check element-active"></i>
+                    {% else %}
+                        <i class="fa fa-ban element-disabled"></i>
+                    {% endif %}
+
+                <td>
+                    <a href="{{ path('editBackend',{'entity':entity,'element':element.slug}) }}">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#borrar-{{ element.slug }}">
+                        <i class="fa fa-trash"></i>
+                    </a>
+
+                    <div class="modalDialog" id="borrar-{{ element.slug }}">
+                        <div>
+                            <a href="#close" title="Close" class="close">X</a>
+
+                            <h3 class="alerta">{% trans %}form.caution{% endtrans %}</h3>
+
+                            <p class="mensaje">
+                                {% trans %}sections.list.predelte{% endtrans %}
+                            </p>
+                            <a class="btn btn-danger"
+                               href="{{ path('deleteBackend',{'entity':entity,'element':element.slug}) }}">
+                                <i class="fa fa-trash"></i>
+                                {% trans %}form.delete{% endtrans %}
+                            </a>
+                            <a class="btn btn-success" href="#close">
+                                <i class="fa fa-reply"></i>
+                                {% trans %}form.back{% endtrans %}
+                            </a>
+
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">Nada que listar.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+

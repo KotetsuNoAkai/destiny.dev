@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68bcb9b0-a836-4441-9c7d-5e8c51e97c05" name="Default" comment=" 29/03/2015&#10; &#10; BackendController:&#10; &#10;- Ahora, la subida de archivos solo es obligatoria en la creacion de la entidad.&#10;- Añadida las traduciones a los mensajes FLASH.&#10;- En el caso de que en el REPOSITORIO de la entidad exista auna funcion llamada GETONE, se llama a esta, en vez de a FINDONEBYSLUG.&#10;&#10;IdiomasType:&#10;-Añadida las traducciones a la etiqueta.&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/includes/backendMenuLeft.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/includes/backendMenuLeft.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="destiny.dev.iws" />
@@ -104,22 +110,18 @@
       <file leaf-file-name="BackendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4754717" vertical-offset="2655" max-vertical-offset="3471">
-              <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.8676749" vertical-offset="2142" max-vertical-offset="3946">
+              <caret line="153" column="47" selection-start-line="153" selection-start-column="47" selection-end-line="153" selection-end-column="47" />
               <folding>
-                <element signature="e#48#105#0#PHP" expanded="true" />
-                <element signature="e#4363#4376#0#PHP" expanded="true" />
+                <element signature="e#49#106#0#PHP" expanded="true" />
+                <element signature="e#397#439#0#PHP" expanded="true" />
+                <element signature="e#841#882#0#PHP" expanded="true" />
+                <element signature="e#1775#1788#0#PHP" expanded="true" />
+                <element signature="e#1894#1941#0#PHP" expanded="true" />
+                <element signature="e#3057#3104#0#PHP" expanded="true" />
+                <element signature="e#4256#4269#0#PHP" expanded="true" />
+                <element signature="e#5277#5290#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.es.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1015">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,8 +129,8 @@
       <file leaf-file-name="IdiomasType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1618">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            <state vertical-scroll-proportion="-7.769231" vertical-offset="2" max-vertical-offset="1635">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -165,12 +167,12 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/asset/backend/css/dashboard.css" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" />
       </list>
     </option>
   </component>
@@ -191,7 +193,7 @@
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="2" id="Add" />
@@ -265,102 +267,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.phpunit" />
+    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -373,7 +285,8 @@
     <property name="dynamic.classpath" value="false" />
     <property name="TODO_SCOPE" value="Destiny" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
-    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
+    <property name="LayoutCode.rearrangeEntriesTwig" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -461,7 +374,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427663276341</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" 29/03/2015&#10; &#10; BackendController:&#10; &#10;- Ahora, la subida de archivos solo es obligatoria en la creacion de la entidad.&#10;- Añadida las traduciones a los mensajes FLASH.&#10;- En el caso de que en el REPOSITORIO de la entidad exista auna funcion llamada GETONE, se llama a esta, en vez de a FINDONEBYSLUG.&#10;&#10;IdiomasType:&#10;-Añadida las traducciones a la etiqueta.&#10;">
+      <created>1427663282605</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1427663282605</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -486,22 +405,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32796317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29919448" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.49885058" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796317" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2564725" sideWeight="0.50342464" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2564725" sideWeight="0.50428814" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2564725" sideWeight="0.50342464" order="3" side_tool="true" content_ui="tabs" x="485" y="57" width="309" height="869" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2564725" sideWeight="0.49657536" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2564725" sideWeight="0.49571183" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -548,8 +467,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2856">
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,8 +508,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2856">
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,8 +541,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2856">
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -637,8 +574,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2856">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,8 +598,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1088">
           <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,8 +636,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
           <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -844,14 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31734318" vertical-offset="933" max-vertical-offset="2140">
-          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15315315" vertical-offset="306" max-vertical-offset="1354">
@@ -884,29 +831,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1618">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="0.34289277" vertical-offset="575" max-vertical-offset="2400">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+            <element signature="e#175#188#0#Twig" expanded="true" />
+            <element signature="e#673#684#0#Twig" expanded="true" />
+            <element signature="e#1107#1126#0#Twig" expanded="true" />
+            <element signature="e#1390#1401#0#Twig" expanded="true" />
+            <element signature="e#1949#1962#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1015">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.30321047" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.769231" vertical-offset="2" max-vertical-offset="1635">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4754717" vertical-offset="2655" max-vertical-offset="3471">
-          <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.8676749" vertical-offset="2142" max-vertical-offset="3946">
+          <caret line="153" column="47" selection-start-line="153" selection-start-column="47" selection-end-line="153" selection-end-column="47" />
           <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-            <element signature="e#4363#4376#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#397#439#0#PHP" expanded="true" />
+            <element signature="e#841#882#0#PHP" expanded="true" />
+            <element signature="e#1775#1788#0#PHP" expanded="true" />
+            <element signature="e#1894#1941#0#PHP" expanded="true" />
+            <element signature="e#3057#3104#0#PHP" expanded="true" />
+            <element signature="e#4256#4269#0#PHP" expanded="true" />
+            <element signature="e#5277#5290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

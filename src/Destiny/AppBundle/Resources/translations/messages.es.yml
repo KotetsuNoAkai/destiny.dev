@@ -10,6 +10,10 @@ flash:
     create:
         title: ¡Se ha creado correctamente!
         message: Se ha creado correctamente el elemento (entidad).
+
+    change:
+        title: ¡Se ha cambiado el estado correctamente!
+        message: Se ha cambiado el estado correctamente el elemento (entidad).
 form:
     delete: Borrar
     back: Salir sin borrar

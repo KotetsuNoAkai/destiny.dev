@@ -455,7 +455,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427663200170</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=" 29/03/2015&#10; &#10; BackendController:&#10; &#10;- Ahora, la subida de archivos solo es obligatoria en la creacion de la entidad.&#10;- Añadida las traduciones a los mensajes FLASH.&#10;- En el caso de que en el REPOSITORIO de la entidad exista auna funcion llamada GETONE, se llama a esta, en vez de a FINDONEBYSLUG.&#10;&#10;IdiomasType:&#10;-Añadida las traducciones a la etiqueta.&#10;">
+      <created>1427663276341</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1427663276341</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">

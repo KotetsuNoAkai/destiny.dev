@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7bbbe87b7d162547b7f965273455b7d6",
+    "hash": "93a27d6312ce0806a169c8201921144d",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -332,16 +332,16 @@
         },
         {
             "name": "doctrine/data-fixtures",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "b6e28afc4a52bfbb6768091f890d08085aa77e70"
+                "reference": "422952ccf7151c02bb5c01fadb305dce266a3b5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/b6e28afc4a52bfbb6768091f890d08085aa77e70",
-                "reference": "b6e28afc4a52bfbb6768091f890d08085aa77e70",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/422952ccf7151c02bb5c01fadb305dce266a3b5f",
+                "reference": "422952ccf7151c02bb5c01fadb305dce266a3b5f",
                 "shasum": ""
             },
             "require": {
@@ -349,7 +349,7 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "doctrine/orm": "~2.4"
+                "doctrine/orm": "~2.2"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
@@ -382,7 +382,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2015-03-23 01:13:09"
+            "time": "2015-03-27 21:01:43"
         },
         {
             "name": "doctrine/dbal",

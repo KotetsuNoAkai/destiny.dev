@@ -1,0 +1,29 @@
+flash:
+    edit:
+        title: ¡Se ha editado correctamente!
+        message: Se ha guardado correctamente el elemento (entidad).
+
+    delete:
+        title: ¡Se ha borrado correctamente!
+        message: Se ha borrado correctamente el elemento (entidad).
+
+    create:
+        title: ¡Se ha creado correctamente!
+        message: Se ha creado correctamente el elemento (entidad).
+form:
+    delete: Borrar
+    back: Salir sin borrar
+
+    status:
+        active: Activo
+        desactive: Desactivado
+list:
+    caution: Precaucion
+    predelte: ¿Esta usted seguro de borrar este elemento?
+
+languages:
+    form:
+      name: Nombre del Idioma
+      isoCode: Codigo ISO
+      file: Bandera
+      status: Estado

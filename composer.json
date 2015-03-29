@@ -25,7 +25,6 @@
         "raulfraile/ladybug-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
         "gedmo/doctrine-extensions": "dev-master"
-
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

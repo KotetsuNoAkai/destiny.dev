@@ -30,14 +30,11 @@
         {% for field in form.children if field.vars.name != '_token' %}
             <div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
                 {% set field_label = entity_fields[field.vars.name]['label']|default(null) %}
-                {{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-2 control-label' } }) }}
+                {{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-3 control-label' } }) }}
                 <div class="col-sm-12">
                     {{ form_widget (field,{'attr':{'class':'form-control'}}) }}
-
                     {{ form_errors(field) }}
-
                 </div>
-
             </div>
         {% endfor %}
 

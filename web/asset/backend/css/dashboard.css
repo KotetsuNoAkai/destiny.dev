@@ -116,3 +116,15 @@ body {
 .element-disabled {
     color: red;
 }
+
+.required:after {
+
+    content: " *";
+
+    color: #EC3632
+
+}
+
+.control-label {
+    text-align: left !important;
+}

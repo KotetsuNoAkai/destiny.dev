@@ -7,6 +7,10 @@ flash:
         title: ¡Se ha borrado correctamente!
         message: Se ha borrado correctamente el elemento (entidad).
 
+    notdelete:
+        title: ¡NO se ha borrado correctamente!
+        message: NO se ha borrado el elemento (entidad).
+
     create:
         title: ¡Se ha creado correctamente!
         message: Se ha creado correctamente el elemento (entidad).

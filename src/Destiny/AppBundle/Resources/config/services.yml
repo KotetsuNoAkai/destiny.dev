@@ -1,7 +1,7 @@
 services:
     destiny_appbundle.form.type.idiomas:
         class: Destiny\AppBundle\Form\IdiomasType
-        arguments: ["@doctrine.orm.entity_manager", "@translator"]
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
         tags:
             - { name: form.type }
 

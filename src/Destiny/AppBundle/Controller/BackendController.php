@@ -6,7 +6,6 @@ namespace Destiny\AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class BackendController
@@ -36,13 +35,19 @@ class BackendController extends Controller
 		$em = $this->getDoctrine ()->getManager ();
 
 		//Listamos todas los elementos de la entidad.
-		$list = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity))->findAll ();
 
-		//@Todo Personalizar la salida. listar solo los campos seleccionados.
+		$listRepository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+
+		$list = (method_exists ($listRepository, 'getAll'))
+			? $listRepository->getAll ()
+			: $listRepository->findAll ();
+
 		return $this->render ('DestinyAppBundle:Backend:list.html.twig',
 			[
 				'list' => $list,
-				'entity' => $entity
+				'entity' => $entity,
+				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
+					? $this->get ($entity)->listElements () : NULL
 			]);
 	}
 
@@ -141,26 +146,37 @@ class BackendController extends Controller
 			? $deleteRepository->getOne($element)
 			: $deleteRepository->findOneBySlug($element);
 
-		
+
 
 		if (NULL != $delete) {
-			//@Todo Verificar si el elemento es borrable o no.
-			$em->remove ($delete);
-			$em->flush ();
 
-			$fs = new Filesystem();
+			if ($this->get ($entity)->isDeletable ($delete) === TRUE) {
+				$em->remove ($delete);
+				$em->flush ();
 
-			//En el caso de que la emtidad tenga una imagen, la elimina.
-			if ((method_exists ($delete, 'getWebPath')) and ($fs->exists ($delete->getWebPath ()))) {
-				$fs->remove($delete->getWebPath ());
+				$fs = new Filesystem();
+
+				//En el caso de que la emtidad tenga una imagen, la elimina.
+				if ((method_exists ($delete, 'getWebPath')) and ($fs->exists ($delete->getWebPath ()))) {
+					$fs->remove ($delete->getWebPath ());
+				}
+
+				$traductor = $this->get ('translator');
+
+				$this->get ('session')->getFlashBag ()->set ('success', [
+					'title' => $traductor->trans ('flash.delete.title'),
+					'message' => $traductor->trans ('flash.delete.message', ['entidad' => $delete])
+				]);
+
+			} else {
+				//En caso de que el elemnto, no sea borrable, muestra un mensaje de alerta y te devuelve al listado
+				$traductor = $this->get ('translator');
+
+				$this->get ('session')->getFlashBag ()->set ('danger', [
+					'title' => $traductor->trans ('flash.notdelete.title'),
+					'message' => $traductor->trans ('flash.notdelete.message', ['entidad' => $delete])
+				]);
 			}
-
-			$traductor = $this->get('translator');
-
-			$this->get ('session')->getFlashBag()->set ('success', [
-				'title' => $traductor->trans('flash.delete.title'),
-				'message' => $traductor->trans ('flash.delete.message', ['entidad' => $delete])
-			]);
 
 
 		}
@@ -171,9 +187,9 @@ class BackendController extends Controller
 
 	}
 
-	//@Todo Funcione de cambio de estado especial(Solo puede haber un elemento verdadero).
+
 	/**
-	 * @Route("/change-status/{entity}/{element}",name="changeStatusBackend")
+	 * @Route("/change-status/{entity}/{element}/",name="changeStatusBackend")
 	 */
 	public function changeStatusBackendAction ($entity, $element)
 	{
@@ -186,10 +202,17 @@ class BackendController extends Controller
 			: $changeRepository->findOneBySlug ($element);
 
 
-		if (NULL != $change) {
+		if ((NULL != $change) and ($this->get ($entity)->isChangeable ($change) == TRUE)) {
+
+			$list = (method_exists ($changeRepository, 'getAll'))
+				? $changeRepository->getAll ()
+				: $changeRepository->findAll ();
 
 			$status = ($change->getEstado () == TRUE) ? FALSE : TRUE;
 			$change->setEstado ($status);
+			$em->persist ($change);
+
+
 			$em->flush ();
 
 			$traductor = $this->get ('translator');
@@ -197,6 +220,59 @@ class BackendController extends Controller
 			$this->get ('session')->getFlashBag ()->set ('success', [
 				'title' => $traductor->trans ('flash.change.title'),
 				'message' => $traductor->trans ('flash.change.message', ['entidad' => $change])
+			]);
+
+
+		} else {
+			//En caso de que el elemnto, no sea borrable, muestra un mensaje de alerta y te devuelve al listado
+			$traductor = $this->get ('translator');
+
+			$this->get ('session')->getFlashBag ()->set ('danger', [
+				'title' => $traductor->trans ('flash.notChangable.title'),
+				'message' => $traductor->trans ('flash.notChangable.message', ['entidad' => $change])
+			]);
+		}
+
+		return $this->redirect ($this->generateUrl ('listBackend', [
+			'entity' => $entity,
+		]));
+
+	}
+
+	/**
+	 * @Route("/change-default/{entity}/{element}",name="changeDefaultBackend")
+	 */
+	public function changeDefaultBackendAction ($entity, $element)
+	{
+		$em = $this->getDoctrine ()->getManager ();
+
+		$changeRepository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+
+		$change = (method_exists ($changeRepository, 'getOne'))
+			? $changeRepository->getOne ($element)
+			: $changeRepository->findOneBySlug ($element);
+
+
+		if (NULL != $change) {
+
+			$list = (method_exists ($changeRepository, 'getAll'))
+				? $changeRepository->getAll ()
+				: $changeRepository->findAll ();
+
+			foreach ($list as $changeList) {
+				$changeList->setDefecto (($changeList === $change) ? TRUE : FALSE);
+
+				$em->persist ($changeList);
+			}
+
+
+			$em->flush ();
+
+			$traductor = $this->get ('translator');
+
+			$this->get ('session')->getFlashBag ()->set ('success', [
+				'title' => $traductor->trans ('flash.status.title'),
+				'message' => $traductor->trans ('flash.status.message', ['entidad' => $change])
 			]);
 
 

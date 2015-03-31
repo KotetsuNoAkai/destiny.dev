@@ -11,12 +11,10 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
-
 /**
  * Class IdiomasType
  * @package Destiny\AppBundle\Form
  *
- * @Todo No permitir eliminar idioma por defeecto.
  * @Todo CRUD + Test de cambio de estado + cambio de estado especial(Solo un unico TRUE)
  */
 class IdiomasType extends AbstractType
@@ -68,5 +66,34 @@ class IdiomasType extends AbstractType
 		$idioma = new Idiomas();
 
 		return $idioma;
+	}
+
+	public function isDeletable ($idioma)
+	{
+		if ($idioma->getDefecto () === TRUE) {
+			return FALSE;
+		}
+
+		return TRUE;
+	}
+
+	public function isChangeable ($idioma)
+	{
+		if ($idioma->getDefecto () === TRUE) {
+			return FALSE;
+		}
+
+		return TRUE;
+	}
+
+	public function listElements ()
+	{
+		return
+			[
+				$this->translator->trans ('languages.list.isoCode') => 'isoCode',
+				$this->translator->trans ('languages.list.flag') => 'image',
+				$this->translator->trans ('languages.list.default') => 'changeStatus'
+			];
+
 	}
 }

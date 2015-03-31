@@ -8,8 +8,8 @@ flash:
         message: Se ha borrado correctamente el elemento (entidad).
 
     notdelete:
-        title: ¡NO se ha borrado correctamente!
-        message: NO se ha borrado el elemento (entidad).
+        title: ¡El elemento no se ha eliminado!
+        message: El elemento (entidad) no puede ser eliminado por que es el elemento por defecto, si quiere eliminarlo primero cambie el elmento por defecto.
 
     create:
         title: ¡Se ha creado correctamente!
@@ -18,6 +18,15 @@ flash:
     change:
         title: ¡Se ha cambiado el estado correctamente!
         message: Se ha cambiado el estado correctamente el elemento (entidad).
+
+    status:
+        title: ¡Se ha cambiado el elemento por defecto correctamente!
+        message: El elemento por defecto ahora es: entidad.
+
+    notChangable:
+        title: ¡El elemento no se ha podido cambiar de estado!
+        message: El elemento (entidad) no puede ser cambiado de estado por que es el elemento por defecto, si quiere cambiarlo primero cambie el elmento por defecto.
+
 form:
     delete: Borrar
     back: Salir sin borrar
@@ -35,3 +44,8 @@ languages:
       isoCode: Codigo ISO
       file: Bandera
       status: Estado
+
+    list:
+      isoCode: Codigo Iso
+      flag: Bandera
+      default: Defecto

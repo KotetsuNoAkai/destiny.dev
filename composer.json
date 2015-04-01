@@ -24,7 +24,12 @@
 		"doctrine/doctrine-fixtures-bundle": "dev-master",
         "raulfraile/ladybug-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
-        "gedmo/doctrine-extensions": "dev-master"
+        "gedmo/doctrine-extensions": "dev-master",
+        "phpunit/phpunit": "4.5.*",
+        "phpunit/php-invoker": "*",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-selenium": ">=1.2"
+
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

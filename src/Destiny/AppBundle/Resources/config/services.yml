@@ -6,3 +6,27 @@ services:
             - { name: form.type }
 
     idiomas: "@destiny_appbundle.form.type.idiomas"
+
+    destiny_appbundle.form.type.newsletter:
+        class: Destiny\AppBundle\Form\NewsletterType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
+        tags:
+            - { name: form.type }
+
+    newsletter: "@destiny_appbundle.form.type.newsletter"
+
+    destiny_appbundle.form.type.mensajes:
+        class: Destiny\AppBundle\Form\MessagesType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
+        tags:
+            - { name: form.type }
+
+    mensajes: "@destiny_appbundle.form.type.mensajes"
+
+    destiny_appbundle.form.type.usuarios:
+        class: Destiny\AppBundle\Form\UsuariosType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
+        tags:
+            - { name: form.type }
+
+    usuarios: "@destiny_appbundle.form.type.usuarios"

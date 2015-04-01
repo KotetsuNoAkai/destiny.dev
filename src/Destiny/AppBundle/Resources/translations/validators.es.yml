@@ -1,0 +1,42 @@
+language:
+    name:
+        notblank: Tiene que indicar un nombre para el idioma.
+        min: El idioma tiene que tener como minimo {{ limit }} caracteres.
+        min: El idioma tiene que tener como maximo {{ limit }} caracteres.
+        notnumber: El nombre del idioma no puede contener un numero.
+
+    isocode:
+        notblank: Tiene que indicar un codigo iso para el idioma.
+        min: El codigo iso tiene que tener como minimo {{ limit }} caracteres.
+        min: El codigo iso tiene que tener como maximo {{ limit }} caracteres.
+        notnumber: El codigo iso del idioma no puede contener un numero.
+
+    flag:
+        notimage: El icono de la bandera tiene que ser una imagen.
+        maxSize: El icono de la bandera tiene que tener como maximo {{ limit }} {{ suffix }}.
+
+newsletter:
+    email:
+        email: Tiene que indicar un email valido.
+        notBlanck: Tiene que indicar un email.
+        min: El email tiene que tener como minimo {{ limit }} caracteres.
+        min: El email tiene que tener como maximo {{ limit }} caracteres.
+
+messages:
+    email:
+        email: Tiene que indicar un email valido.
+        notBlank: Tiene que indicar un email.
+        min: El email tiene que tener como minimo {{ limit }} caracteres.
+        min: El email tiene que tener como maximo {{ limit }} caracteres.
+
+    subject:
+        notBlank: Tiene que indicar un asunto.
+        min: El asunto tiene que tener como minimo {{ limit }} caracteres.
+        min: El asunto tiene que tener como maximo {{ limit }} caracteres.
+
+    body:
+        min: El cuerpo del mensaje tiene que tener como minimo {{ limit }} caracteres.
+
+    telephone:
+        min: El telefono tiene que tener como minimo {{ limit }} caracteres.
+        number: El telefono tiene que ser un numero.

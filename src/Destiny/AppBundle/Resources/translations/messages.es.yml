@@ -27,9 +27,23 @@ flash:
         title: ¡El elemento no se ha podido cambiar de estado!
         message: El elemento (entidad) no puede ser cambiado de estado por que es el elemento por defecto, si quiere cambiarlo primero cambie el elmento por defecto.
 
+    cantcreate:
+        title: ¡El elmento no puede ser creado!
+        message: Este elemento no puede ser creado.
+menu:
+    dashboard: Inicio
+    settings: Configuracion
+    languages: Idiomas
+
+
+
 form:
     delete: Borrar
     back: Salir sin borrar
+    lastmodification: Ultima modificacion
+    status: Estado
+    edit: Editar
+    delete: Borrar
 
     status:
         active: Activo
@@ -38,14 +52,36 @@ list:
     caution: Precaucion
     predelte: ¿Esta usted seguro de borrar este elemento?
 
-languages:
+idiomas:
     form:
       name: Nombre del Idioma
       isoCode: Codigo ISO
       file: Bandera
       status: Estado
 
+
     list:
       isoCode: Codigo Iso
       flag: Bandera
       default: Defecto
+      status: Activo
+
+newsletter:
+    list:
+        name: Email
+        status: Activo
+
+    form:
+      email: Email
+
+mensajes:
+    list:
+        name: Email
+        subject: Asunto
+        status: Leido
+
+    form:
+        email: Email
+        telephone: Telefono
+        subject: Asunto
+        body: Mensaje

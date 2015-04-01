@@ -3,7 +3,7 @@
     {% block backendTitle %}
 	    {{ entity | capitalize }}
 	    {% if app.request.attributes.get('_route') == 'editBackend' %}
-		    <a class="btn btn-success pull-right" href="#">
+		    <a class="btn btn-success pull-right" href="{{ path('createBackend',{'entity':entity}) }}">
 			    <i class="fa fa-plus-circle"></i>
 
 			    Nuevo idioma
@@ -24,26 +24,47 @@
 			Volver
 		</a>
 	</h2>
+		<div class="col-sm-6">
 
-	<form action="#" class="form-horizontal col-md-6" role="form" method="post" {{ form_enctype(form) }}>
 
-		{% for field in form.children if field.vars.name != '_token' %}
-			<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
-				{% set field_label = entity_fields[field.vars.name]['label']|default(null) %}
-				{{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-3 control-label' } }) }}
-				<div class="col-sm-12">
-					{{ form_widget (field,{'attr':{'class':'form-control'}}) }}
-					{{ form_errors(field) }}
+			{% include('@DestinyApp/Backend/listContent.html.twig' ) %}
+
+
+		</div>
+
+		<form action="#" class="form-horizontal col-sm-6" role="form" method="post" {{ form_enctype(form) }}>
+
+			{% for field in form.children if field.vars.name != '_token' %}
+				<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
+					{% set field_label = entity_fields[field.vars.name]['label']|default(null) %}
+					{{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-12 control-label' } }) }}
+					<div class="col-sm-12">
+						{{ form_widget (field,{'attr':{'class':'form-control'}}) }}
+						{%  if form_errors(field)  != '' %}
+							<br>
+							<div class="alert alert-danger fade in">
+								<a data-dismiss="alert" class="pull-right" href="" type="button">
+									<i class="fa fa-times"></i>
+								</a>
+									<strong>Error</strong><br>
+								{{ form_errors(field)}}
+
+							</div>
+
+						{%  endif %}
+					</div>
 				</div>
-			</div>
-		{% endfor %}
+			{% endfor %}
 
-		{{ form_rest(form) }}
-		<button type="submit" class="btn btn-default">Submit</button>
-	</form>
-	<div class="col-md-6">
+			{{ form_rest(form) }}
+			<button type="submit" class="btn btn-success pull-right" value="Submit" >Submit</button>
+		</form>
+	<div class="clearfix"></div>
+	{%  if (form.vars.value.webPath is defined) and (form.vars.value.webPath != null)  %}
+	<div class="col-md-6 pull-right">
 		<h5 class="sub-header">Imagen Actual</h5>
 		<img class="img-responsive" src="{{ asset(form.vars.value.webPath) }}">
 	</div>
+	{% endif %}
 
 {% endblock %}

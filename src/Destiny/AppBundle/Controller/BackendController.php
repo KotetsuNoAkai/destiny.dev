@@ -6,15 +6,40 @@ namespace Destiny\AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class BackendController
  * @package Destiny\AppBundle\Controller
  *
- * @TODO Añadir el listado de entidades cuando estas editando.
  */
 class BackendController extends Controller
 {
+
+	public function getElements($entity, $element = null,$type = 'list')
+	{
+		$em = $this->getDoctrine ()->getManager ();
+
+		$repository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+
+		switch ($type){
+			case ($type === 'list'):
+					return (method_exists ($repository, 'getAll'))
+						? $repository->getAll ()
+						: $repository->findAll ();
+			break;
+
+			case ($type === 'one'):
+				return (method_exists ($repository, 'getOne'))
+					? $repository->getOne ($element)
+					: $repository->findOneBySlug ($element);
+				break;
+		}
+
+
+
+	}
+
 	/**
 	 * @Route("/",name="indexBackend")
 	 */
@@ -36,18 +61,16 @@ class BackendController extends Controller
 
 		//Listamos todas los elementos de la entidad.
 
-		$listRepository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
-
-		$list = (method_exists ($listRepository, 'getAll'))
-			? $listRepository->getAll ()
-			: $listRepository->findAll ();
+		$list = $this->getElements($entity);
 
 		return $this->render ('DestinyAppBundle:Backend:list.html.twig',
 			[
 				'list' => $list,
 				'entity' => $entity,
 				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
-					? $this->get ($entity)->listElements () : NULL
+					? $this->get ($entity)->listElements () : NULL,
+				'cantCreate' => (property_exists($this->get ($entity), 'cantCreate'))
+					? True : false
 			]);
 	}
 
@@ -59,37 +82,50 @@ class BackendController extends Controller
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
-		$new = $this->get (strtolower ($entity))->newEntity ();
+		if (!(property_exists($this->get ($entity), 'cantCreate')))
+		{
 
-		$formulario = $this->createForm ($this->get (strtolower ($entity)), $new);
+			$new = $this->get (strtolower ($entity))->newEntity ();
 
-		$formulario->handleRequest ($request);
+			$formulario = $this->createForm ($this->get (strtolower ($entity)), $new);
 
-		if (($formulario->isSubmitted ()) && ($formulario->isValid ())) {
-			if (method_exists ($new, 'upload')) $new->upload ();
-			$em->persist ($new);
-			$em->flush ();
+			$formulario->handleRequest ($request);
 
-			$traductor = $this->get ('translator');
+			if (($formulario->isSubmitted ()) && ($formulario->isValid ())) {
+				if (method_exists ($new, 'upload')) $new->upload ();
+				if (method_exists ($this->get ($entity), 'preCreateSave')) $this->get ($entity)->preCreateSave ($new);
+				$em->persist ($new);
+				$em->flush ();
 
-			$this->get ('session')->getFlashBag ()->set ('success', [
-				'title' => $traductor->trans ('flash.create.title'),
-				'message' => $traductor->trans ('flash.create.message', ['entidad' => $new])
+				$traductor = $this->get('translator');
+
+				$this->get ('session')->getFlashBag()->set ('success', [
+					'title' => $traductor->trans ('flash.edit.title'),
+					'message' => $traductor->trans ('flash.edit.message', ['entidad' => $edit])
+				]);
+			}
+
+			return $this->render ('DestinyAppBundle:Backend:editCreate.html.twig',
+				[
+					'form' => $formulario->createView (),
+					'entity' => $entity,
+					'list' => $this->getElements ($entity),
+					'listElements' => (method_exists ($this->get ($entity), 'listElements'))
+						? $this->get ($entity)->listElements () : NULL
+				]);
+
+		} else{
+
+			$traductor = $this->get('translator');
+
+			$this->get ('session')->getFlashBag()->set ('danger', [
+				'title' => $traductor->trans ('flash.cantcreate.title'),
+				'message' => $traductor->trans ('flash.cantcreate.message')
 			]);
 
-			return $this->redirect
-			($this->generateUrl ('editBackend',
-				[
-					'entity' => $entity,
-					'element' => $new->getSlug()
-				]));
+			return $this->redirect($request->headers->get('referer'));
 		}
 
-		return $this->render ('DestinyAppBundle:Backend:editCreate.html.twig',
-			[
-				'form' => $formulario->createView(),
-				'entity' => $entity
-			]);
 	}
 
 	/**
@@ -100,16 +136,15 @@ class BackendController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager ();
 
+		$edit = $this->getElements($entity,$element,'one');
 
-		$editRepository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+		$formulario = $this->createForm ($this->get($entity), $edit);
 
-		$edit = (method_exists ($editRepository, 'getOne'))
-			? $editRepository->getOne($element)
-			: $editRepository->findOneBySlug($element);
+		if (method_exists ($edit, 'upload'))
+		{
+			$formulario->add ('archivo', 'file', ['required' => FALSE]);
+		}
 
-
-		$formulario = $this->createForm ($this->get('idiomas'), $edit);
-		$formulario->add ('archivo', 'file', ['required' => FALSE]);
 		$formulario->handleRequest($request);
 
 		if (($formulario->isSubmitted()) && ($formulario->isValid())) {
@@ -128,15 +163,18 @@ class BackendController extends Controller
 
 		return $this->render ('DestinyAppBundle:Backend:editCreate.html.twig',
 			[
-				'form' => $formulario->createView(),
-				'entity' => $entity
+				'form'   => $formulario->createView(),
+				'entity' => $entity,
+				'list'   => $this->getElements($entity),
+				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
+								   ? $this->get ($entity)->listElements () : NULL
 			]);
 	}
 
 	/**
 	 * @Route("/delete/{entity}/{element}",name="deleteBackend")
 	 */
-	public function deleteBackendAction($entity, $element)
+	public function deleteBackendAction(Request $request,$entity, $element)
 	{
 		$em = $this->getDoctrine()->getManager();
 
@@ -145,7 +183,6 @@ class BackendController extends Controller
 		$delete = (method_exists ($deleteRepository, 'getOne'))
 			? $deleteRepository->getOne($element)
 			: $deleteRepository->findOneBySlug($element);
-
 
 
 		if (NULL != $delete) {
@@ -181,9 +218,10 @@ class BackendController extends Controller
 
 		}
 
-		return $this->redirect ($this->generateUrl ('listBackend', [
-			'entity' => $entity,
-		]));
+
+
+
+		return $this->redirect($request->headers->get('referer'));
 
 	}
 
@@ -191,7 +229,7 @@ class BackendController extends Controller
 	/**
 	 * @Route("/change-status/{entity}/{element}/",name="changeStatusBackend")
 	 */
-	public function changeStatusBackendAction ($entity, $element)
+	public function changeStatusBackendAction (Request $request, $entity, $element)
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
@@ -233,16 +271,14 @@ class BackendController extends Controller
 			]);
 		}
 
-		return $this->redirect ($this->generateUrl ('listBackend', [
-			'entity' => $entity,
-		]));
+		return $this->redirect($request->headers->get('referer'));
 
 	}
 
 	/**
 	 * @Route("/change-default/{entity}/{element}",name="changeDefaultBackend")
 	 */
-	public function changeDefaultBackendAction ($entity, $element)
+	public function changeDefaultBackendAction (Request $request, $entity, $element)
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
@@ -261,7 +297,7 @@ class BackendController extends Controller
 
 			foreach ($list as $changeList) {
 				$changeList->setDefecto (($changeList === $change) ? TRUE : FALSE);
-
+				$changeList->setEstado(true);
 				$em->persist ($changeList);
 			}
 
@@ -278,9 +314,7 @@ class BackendController extends Controller
 
 		}
 
-		return $this->redirect ($this->generateUrl ('listBackend', [
-			'entity' => $entity,
-		]));
+		return $this->redirect($request->headers->get('referer'));
 
 	}
 }

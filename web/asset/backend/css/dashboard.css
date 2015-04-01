@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-top: 50px;
+    font-size: 12px;
 }
 
 /*
@@ -127,4 +128,21 @@ body {
 
 .control-label {
     text-align: left !important;
+}
+
+input[type="file"] {
+    border: medium none !important;
+    box-shadow: none  !important;
+    display: block  !important;
+    height: auto  !important;
+    margin: 5px 5px 4px  !important;
+}
+
+.col-sm-6{
+    padding-left: 0 !important  ;
+}
+
+.alert-danger > ul{
+    list-style: none;
+    padding-left: 0;
 }

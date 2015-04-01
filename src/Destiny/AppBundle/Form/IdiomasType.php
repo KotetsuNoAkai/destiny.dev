@@ -15,7 +15,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  * Class IdiomasType
  * @package Destiny\AppBundle\Form
  *
- * @Todo CRUD + Test de cambio de estado + cambio de estado especial(Solo un unico TRUE)
+
  */
 class IdiomasType extends AbstractType
 {
@@ -35,10 +35,12 @@ class IdiomasType extends AbstractType
 	public function buildForm (FormBuilderInterface $builder, array $options)
 	{
 		$builder
-			->add ('nombre', 'text', ['label' => $this->translator->trans ('languages.form.name')])
-			->add ('isoCode', 'text', ['label' => $this->translator->trans ('languages.form.isoCode')])
-			->add ('archivo', 'file', ['label' => $this->translator->trans ('languages.form.file')])
-			->add ('estado', 'choice', ['label' => $this->translator->trans ('languages.form.status'),
+			->add ('nombre', 'text', ['label' => $this->translator->trans ('idiomas.form.name'),
+									  'max_length' => 10])
+			->add ('isoCode', 'text', ['label' => $this->translator->trans ('idiomas.form.isoCode'),
+									   'max_length' => 5])
+			->add ('archivo', 'file', ['label' => $this->translator->trans ('idiomas.form.file')])
+			->add ('estado', 'choice', ['label' => $this->translator->trans ('idiomas.form.status'),
 				'choices' => [TRUE => $this->translator->trans ('form.status.active'),
 					FALSE => $this->translator->trans ('form.status.active')]]);
 	}
@@ -68,6 +70,13 @@ class IdiomasType extends AbstractType
 		return $idioma;
 	}
 
+	public function preCreateSave($idioma)
+	{
+		$idioma->setDefecto(FALSE);
+
+		return $idioma;
+	}
+
 	public function isDeletable ($idioma)
 	{
 		if ($idioma->getDefecto () === TRUE) {
@@ -90,9 +99,9 @@ class IdiomasType extends AbstractType
 	{
 		return
 			[
-				$this->translator->trans ('languages.list.isoCode') => 'isoCode',
-				$this->translator->trans ('languages.list.flag') => 'image',
-				$this->translator->trans ('languages.list.default') => 'changeStatus'
+				$this->translator->trans ('idiomas.list.isoCode') => 'isoCode',
+				$this->translator->trans ('idiomas.list.flag') => 'image',
+				$this->translator->trans ('idiomas.list.default') => 'changeStatus'
 			];
 
 	}

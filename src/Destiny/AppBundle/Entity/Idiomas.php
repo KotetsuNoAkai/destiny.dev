@@ -32,6 +32,19 @@ class Idiomas
 	 * @var string
 	 *
 	 * @ORM\Column(name="nombre", type="string", length=255)
+	 * @Assert\NotBlank(message="language.name.notblank")
+	 * @Assert\Length(
+	 *      min = 2,
+	 *      max = 10,
+	 *      minMessage = "language.name.min",
+	 *      maxMessage = "language.name.max"
+	 * )
+	 *
+	 * @Assert\Regex(
+	 *     pattern="/\d/",
+	 *     match=false,
+	 *     message="language.name.notnumber"
+	 * )
 	 */
 	private $nombre;
 
@@ -46,12 +59,26 @@ class Idiomas
 	 * @var string
 	 *
 	 * @ORM\Column(name="isoCode", type="string", length=255)
+	 * 	 * @Assert\NotBlank(message="language.isocode.notblank")
+	 * @Assert\Length(
+	 *      min = 2,
+	 *      max = 5,
+	 *      minMessage = "language.isocode.min",
+	 *      maxMessage = "language.isocode.max"
+	 * )
+	 *
+	 * @Assert\Regex(
+	 *     pattern="/\d/",
+	 *     match=false,
+	 *     message="language.isocode.notnumber"
+	 * )
 	 */
 	private $isoCode;
 
 	/**
 	 * @return string
-	 * @Assert\File(maxSize="6000000")
+	 * @Assert\File(maxSize="1M",maxSizeMessage="language.flag.maxSize")
+	 * @Assert\Image(mimeTypesMessage="language.flag.notimage")
 	 *
 	 */
 	private $archivo;

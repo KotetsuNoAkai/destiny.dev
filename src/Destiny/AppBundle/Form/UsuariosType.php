@@ -38,8 +38,12 @@ class UsuariosType extends AbstractType
 	public function buildForm (FormBuilderInterface $builder, array $options)
 	{
 		$builder
-			->add ('email', 'text', ['label' => $this->translator->trans ('newsletter.form.email'),
-									  'max_length' => 10]);
+			->add ('email', 'email', ['label' => $this->translator->trans ('usuarios.form.email'),
+									  'max_length' => 100])
+
+			->add('username','text',['label' => $this->translator->trans ('usuarios.form.username')])
+			->add('plainPassword','password',['label' => $this->translator->trans ('usuarios.form.password')])
+			;
 	}
 
 	/**
@@ -75,22 +79,31 @@ class UsuariosType extends AbstractType
 		return $usuario;
 	}
 
-	//@TODO El ROOT no puede ser borrado
 	public function isDeletable ($usuario)
 	{
+		if (in_array('ROLE_ROOT',$usuario->getRoles()))
+		{
+			return false;
+		}
+
 		return TRUE;
 	}
 
-	//@TODO El ROOT no puede ser desactivado
+
 	public function isChangeable ($usuario)
 	{
 
+		if (in_array('ROLE_ROOT',$usuario->getRoles()))
+		{
+			return false;
+		}
+
 		return TRUE;
 	}
 
-	//@TODO Añadir elementos personalizados
-	public function listElements ()
+
+	public function groups ()
 	{
-		return null;
+		return ['ROLE_NORMALUSER' =>'Normal','ROLE_ROOT' => 'Root'];
 	}
 }

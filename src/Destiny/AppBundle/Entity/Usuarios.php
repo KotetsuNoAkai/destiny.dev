@@ -27,6 +27,7 @@ class Usuarios extends BaseUser
 	 */
 	protected $id;
 
+
 	/**
 	 * @var \DateTime
 	 * @Gedmo\Timestampable(on="create")

@@ -40,3 +40,21 @@ messages:
     telephone:
         min: El telefono tiene que tener como minimo {{ limit }} caracteres.
         number: El telefono tiene que ser un numero.
+
+usuarios:
+    email:
+        email: Tiene que indicar un email valido.
+        notBlank: Tiene que indicar un email.
+        min: El email tiene que tener como minimo {{ limit }} caracteres.
+        min: El email tiene que tener como maximo {{ limit }} caracteres.
+
+    username:
+        notBlank: Tiene que indicar un email.
+        min: El email tiene que tener como minimo {{ limit }} caracteres.
+        min: El email tiene que tener como maximo {{ limit }} caracteres.
+
+
+    password:
+        notBlank: Tiene que indicar un password.
+        min: El password tiene que tener como minimo {{ limit }} caracteres.
+        min: El password tiene que tener como maximo {{ limit }} caracteres.

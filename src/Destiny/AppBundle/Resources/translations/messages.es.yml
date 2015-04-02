@@ -9,7 +9,7 @@ flash:
 
     notdelete:
         title: ¡El elemento no se ha eliminado!
-        message: El elemento (entidad) no puede ser eliminado por que es el elemento por defecto, si quiere eliminarlo primero cambie el elmento por defecto.
+        message: El elemento (entidad) no puede ser eliminado.
 
     create:
         title: ¡Se ha creado correctamente!
@@ -25,11 +25,11 @@ flash:
 
     notChangable:
         title: ¡El elemento no se ha podido cambiar de estado!
-        message: El elemento (entidad) no puede ser cambiado de estado por que es el elemento por defecto, si quiere cambiarlo primero cambie el elmento por defecto.
+        message: El elemento (entidad) no puede ser cambiado de estado.
 
     cantcreate:
         title: ¡El elmento no puede ser creado!
-        message: Este elemento no puede ser creado.
+        message: Por algun motivo este elemento no puede ser creado, pongase en contacto con el administrador de la pagina.
 menu:
     dashboard: Inicio
     settings: Configuracion
@@ -85,3 +85,13 @@ mensajes:
         telephone: Telefono
         subject: Asunto
         body: Mensaje
+
+usuarios:
+    list:
+        name: Nombre de usuario
+        status: Activo
+
+    form:
+        email: Email
+        username: Nombre de usuario
+        password: Pasword

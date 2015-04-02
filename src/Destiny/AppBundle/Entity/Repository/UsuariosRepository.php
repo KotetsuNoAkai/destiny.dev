@@ -24,4 +24,17 @@ class UsuariosRepository extends EntityRepository
 			->setParameters(['username' => $username])
 			->getQuery()->getOneOrNullResult();
 	}
+
+	public function getAllByGroup($group)
+	{
+		$em = $this->getEntityManager();
+
+		$query = $em->createQueryBuilder();
+
+		return $query->select(['u'])
+			->from('DestinyAppBundle:Usuarios', 'u')
+			->where($query->expr()->like('u.roles',':group'))
+			->setParameters(['group' => '%'.$group.'%'])
+			->getQuery()->getResult();
+	}
 }

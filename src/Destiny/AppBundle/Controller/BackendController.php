@@ -16,11 +16,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class BackendController extends Controller
 {
 
-	public function getElements($entity, $element = null,$type = 'list')
+	public function getElements($entity, $element = null,$type = 'list',$group=null)
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
 		$repository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+
 
 		switch ($type){
 			case ($type === 'list'):
@@ -34,10 +35,33 @@ class BackendController extends Controller
 					? $repository->getOne ($element)
 					: $repository->findOneBySlug ($element);
 				break;
+
+			case ($type === 'group'):
+				return $repository->getAllByGroup ($group);
+				break;
 		}
 
 
 
+	}
+
+	public function listElements($entity)
+	{
+		$em = $this->getDoctrine ()->getManager ();
+
+		if (method_exists($this->get($entity),'groups'))
+		{
+			$groups = $this->get($entity)->groups();
+			foreach($groups as $group)
+			{
+				$list[$group] = $this->getElements($entity,null,'group',$group);
+			}
+
+		}else{
+			$list = $this->getElements($entity);
+		}
+
+		return $list;
 	}
 
 	/**
@@ -57,22 +81,19 @@ class BackendController extends Controller
 	 */
 	public function listBackendAction ($entity)
 	{
-		$em = $this->getDoctrine ()->getManager ();
-
-		//Listamos todas los elementos de la entidad.
-
-		$list = $this->getElements($entity);
 
 		return $this->render ('DestinyAppBundle:Backend:list.html.twig',
 			[
-				'list' => $list,
 				'entity' => $entity,
+				'list' => $this->listElements($entity),
+				'group' => (method_exists($this->get($entity),'groups')) ? $this->get($entity)->groups() : false,
 				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
 					? $this->get ($entity)->listElements () : NULL,
 				'cantCreate' => (property_exists($this->get ($entity), 'cantCreate'))
-					? True : false
+					? True : false,
 			]);
 	}
+
 
 	/**
 	 * @Route("/create/{entity}/", name="createBackend")
@@ -109,7 +130,8 @@ class BackendController extends Controller
 				[
 					'form' => $formulario->createView (),
 					'entity' => $entity,
-					'list' => $this->getElements ($entity),
+					'list' => $this->listElements($entity),
+					'group' => (method_exists($this->get($entity),'groups')) ? true : false,
 					'listElements' => (method_exists ($this->get ($entity), 'listElements'))
 						? $this->get ($entity)->listElements () : NULL
 				]);
@@ -165,7 +187,8 @@ class BackendController extends Controller
 			[
 				'form'   => $formulario->createView(),
 				'entity' => $entity,
-				'list'   => $this->getElements($entity),
+				'list' => $this->listElements($entity),
+				'group' => (method_exists($this->get($entity),'groups')) ? true : false,
 				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
 								   ? $this->get ($entity)->listElements () : NULL
 			]);

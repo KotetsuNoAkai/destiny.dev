@@ -4,116 +4,25 @@
 {% set name =  entity~'.list.name'  %}
 {% set status =  entity~'.list.status'  %}
 {# @Todo Traducir etiquetas #}
-<table class="table table-striped">
-		<thead>
-		<tr>
-			<td>#</td>
-			<td>{{ name | trans}}</td>
-			{% for element in listElements | keys %}
-				<td>{{ element }}</td>
+
+
+{% if group == false %}
+	{% include ('@DestinyApp/Backend/Include/table.html.twig') %}
+{% else %}
+
+	{% for list in list %}
+		{% set count = loop.index %}
+			{% for group in group %}
+				{% if  count == loop.index%}
+					{{ group }}
+				{% endif %}
 			{% endfor %}
-			<td>{{ 'form.lastmodification' | trans }}</td>
-			<td>{{ status | trans }}</td>
-			<td>{{ 'form.edit' | trans }}</td>
-			<td>{{ 'form.delete' | trans }}</td>
-		</tr>
-		</thead>
-		<tbody>
-		{% for element in list %}
-			<tr>
-				<td>
-					{% if actual == element.slug  %}
-						<i class="fa fa-paint-brush"></i>
-					{% else %}
-						{{ loop.index }}
-					{% endif %}
-				</td>
 
-				<td>
-					<a href="{{ path('editBackend',{'entity':entity,'element':element.slug}) }}">
-						{{ element }}
-					</a>
-				</td>
-				{% for type in listElements %}
-					{% if type == 'image' %}
+		{% include ('@DestinyApp/Backend/Include/table.html.twig') %}
 
-						<td>
-							<img src="{{ asset(element.webPath) }}">
-						</td>
-
-					{% elseif type == 'changeStatus' %}
-
-						<td>
-							{% if element.defecto == true %}
-								<i class="fa fa-check element-active"></i>
-							{% else %}
-								<a href="{{ path('changeDefaultBackend',{'entity':entity,'element':element.slug}) }}">
-									<i class="fa fa-ban element-disabled"></i>
-								</a>
-							{% endif %}
-						</td>
-
-					{% else %}
-
-						<td>
-							{{ attribute(element, type) }}
-						</td>
-					{% endif %}
-				{% endfor %}
-
-				<td>{{ element.fechaModificacion | date ('d/m/y d:i') }}</td>
-				<td><a href="{{ path('changeStatusBackend',{'entity':entity,'element':element.slug}) }}">
-						{% if element.estado == true %}
-							<i class="fa fa-check element-active"></i>
-						{% else %}
-							<i class="fa fa-ban element-disabled"></i>
-						{% endif %}
-					</a>
-				<td>
-					<a href="{{ path('editBackend',{'entity':entity,'element':element.slug}) }}">
-						<i class="fa fa-pencil"></i>
-					</a>
-				</td>
-				<td>
-					{% if actual == element.slug  %}
-					<i class="fa fa-trash"></i>
-					{% else %}
-					<a href="#borrar-{{ element.slug }}">
-						<i class="fa fa-trash"></i>
-					</a>
-
-					<div class="modalDialog" id="borrar-{{ element.slug }}">
-						<div>
-							<a href="#close" title="Close" class="close">X</a>
-
-							<h3 class="alerta">{% trans %}list.caution{% endtrans %}</h3>
-
-							<p class="mensaje">
-								{% trans %}list.predelte{% endtrans %}
-							</p>
-							<a class="btn btn-danger"
-							   href="{{ path('deleteBackend',{'entity':entity,'element':element.slug}) }}">
-								<i class="fa fa-trash"></i>
-								{% trans %}form.delete{% endtrans %}
-							</a>
-							<a class="btn btn-success" href="#close">
-								<i class="fa fa-reply"></i>
-								{% trans %}form.back{% endtrans %}
-							</a>
-
-						</div>
-					</div>
-					{% endif %}
-				</td>
-			</tr>
-		{% else %}
-			<tr>
-				<td colspan="8">Nada que listar.</td>
-			</tr>
-		{% endfor %}
-		</tbody>
-	</table>
+	{% endfor %}
 
 
 
 
+{% endif %}

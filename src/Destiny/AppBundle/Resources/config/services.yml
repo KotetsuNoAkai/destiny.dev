@@ -1,4 +1,9 @@
 services:
+
+    email:
+        class: Destiny\AppBundle\Services\EmailService
+        arguments: ["@swiftmailer.mailer","@templating","@doctrine.orm.entity_manager","@service_container"]
+
     destiny_appbundle.form.type.idiomas:
         class: Destiny\AppBundle\Form\IdiomasType
         arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
@@ -16,7 +21,7 @@ services:
     newsletter: "@destiny_appbundle.form.type.newsletter"
 
     destiny_appbundle.form.type.mensajes:
-        class: Destiny\AppBundle\Form\MessagesType
+        class: Destiny\AppBundle\Form\MensajesType
         arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
         tags:
             - { name: form.type }
@@ -25,8 +30,32 @@ services:
 
     destiny_appbundle.form.type.usuarios:
         class: Destiny\AppBundle\Form\UsuariosType
-        arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
         tags:
             - { name: form.type }
 
     usuarios: "@destiny_appbundle.form.type.usuarios"
+
+    destiny_appbundle.form.type.empresa.web:
+        class: Destiny\AppBundle\Form\EmpresaWebType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    empresaWeb: "@destiny_appbundle.form.type.empresa.web"
+
+    destiny_appbundle.form.type.empresa.contacto:
+        class: Destiny\AppBundle\Form\EmpresaContactoType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    empresaContacto: "@destiny_appbundle.form.type.empresa.contacto"
+
+    destiny_appbundle.form.type.empresa.redes.sociales:
+        class: Destiny\AppBundle\Form\EmpresaRedesSocialesType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    empresaRedesSociales: "@destiny_appbundle.form.type.empresa.redes.sociales"

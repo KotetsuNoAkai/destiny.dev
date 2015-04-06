@@ -1,0 +1,16 @@
+{{ empresa }}<br>
+{{ contacto.dreccionCompleta }}<br>
+{{ idioma }}<br>
+{% for red in redes %}
+
+	<a href="{{ red.url }}">{{ red | raw }}</a><br>
+
+{% else %}
+
+	No se ha añadido ninguna red social
+
+{% endfor %}
+
+{{ usuario }}<br>
+{{ usuario.plainPassword }}<br>
+

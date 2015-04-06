@@ -18,7 +18,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  *
 
  */
-class MessagesType extends AbstractType
+class MensajesType extends AbstractType
 {
 	protected $em, $translator;
 	protected $cantCreate;
@@ -99,4 +99,6 @@ class MessagesType extends AbstractType
 			];
 
 	}
+
+
 }

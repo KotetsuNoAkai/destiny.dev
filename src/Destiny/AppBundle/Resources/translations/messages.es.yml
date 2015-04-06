@@ -30,6 +30,32 @@ flash:
     cantcreate:
         title: ¡El elmento no puede ser creado!
         message: Por algun motivo este elemento no puede ser creado, pongase en contacto con el administrador de la pagina.
+
+    datosEmpresa:
+        title: ¡Se ha creado la empresa!
+        message: Se han guardado correctamente los datos de la empresa entidad.
+
+    datosContacto:
+        title: ¡Se ha creado la dirección de la empresa!
+        message: Se han guardado correctamente los datos de la direccion de entidad.
+
+    datosSocial:
+        title: ¡Se ha creado una nueva red social!
+        message: Se han guardado correctamente los datos de la red social de entidad.
+
+    idioma:
+        title: ¡Se ha añadido el idioma por defecto de la web!
+        message: Se han guardado correctamente los datos del idioma entidad.
+
+    usuarioRoot:
+        title: ¡Se ha añadido el usuario Administrador!
+        message: Se ha finalizado la instalacion y se ha enviado un email con los datos de la instalacion.
+
+instalacion:
+    datosEmpresa: PASO 1: Datos de la empresa
+    datosContacto: PASO 2: Datos fisicos de la empresa
+    datosRedesSociales: Paso 3: Redes sociales
+    idioma: Paso 4: Idioma de la web
 menu:
     dashboard: Inicio
     settings: Configuracion
@@ -95,3 +121,37 @@ usuarios:
         email: Email
         username: Nombre de usuario
         password: Pasword
+empresa:
+    form:
+        nombre: Nombre de la empresa
+        email: Email de la empresa
+        slogan: Eslogan de la empresa
+        archivo: Logo de la empresa
+        estado: Estado
+        mensajeBloqueo: Mensaje de bloqueo de la web
+
+empresaRedesSociales:
+    list:
+        name: Red social
+        status: Estado
+    form:
+        nombre: Red social
+        icono: Icono FontAwesome
+        url: URL
+        estado: Estado
+
+empresaContacto:
+    list:
+        name: Nombre
+        status: Visible
+
+    form:
+        nombre: Nombre
+        direccion: Direccion de la empresa
+        ciudad: Ciudad
+        provincia: Provincia
+        pais: Pais
+        telefono: Telefono de contacto
+        movil: Movil
+        fax: Fax
+        estado: Visible

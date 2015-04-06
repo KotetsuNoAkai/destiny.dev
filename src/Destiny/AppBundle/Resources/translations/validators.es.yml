@@ -18,7 +18,7 @@ language:
 newsletter:
     email:
         email: Tiene que indicar un email valido.
-        notBlanck: Tiene que indicar un email.
+        notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
         min: El email tiene que tener como maximo {{ limit }} caracteres.
 
@@ -58,3 +58,60 @@ usuarios:
         notBlank: Tiene que indicar un password.
         min: El password tiene que tener como minimo {{ limit }} caracteres.
         min: El password tiene que tener como maximo {{ limit }} caracteres.
+
+empresa:
+    name:
+        notBlank: Tiene que indicar un nombre de la empresa.
+        min: El nombre de la empresa tiene que tener como minimo {{ limit }} caracteres.
+        min: El nombre de la empresa tiene que tener como maximo {{ limit }} caracteres.
+
+
+    email:
+        notBlank: Tiene que indicar un email.
+        min: El email tiene que tener como minimo {{ limit }} caracteres.
+        min: El email tiene que tener como maximo {{ limit }} caracteres.
+
+    slogan:
+        notBlank: Tiene que indicar un eslogan para la empresa.
+        min: El eslogan de la empresa tiene que tener como minimo {{ limit }} caracteres.
+        min: El eslogan de la empresa tiene que tener como maximo {{ limit }} caracteres.
+
+    mensajeBloqueo:
+        notBlank: Tiene que indicar un mensaje bloqueo para la empresa.
+        min: El mensaje de bloqueo de la web tiene que tener como minimo {{ limit }} caracteres.
+
+    logo:
+        notimage: El logo de la empresa tiene que ser una imagen.
+        maxSize: El logo de la empresa tiene que tener como maximo {{ limit }} {{ suffix }}.
+
+contacto:
+    name:
+        notBlank: Tiene que indicar un nombre para la direccion de la empresa.
+        min: El nombre de la direccion de la empresa tiene que tener como minimo {{ limit }} caracteres.
+        max: El nombre de la direccion de la empresa tiene que tener como maximo {{ limit }} caracteres.
+
+
+
+    direccion:
+        notBlank: Tiene que indicar una direccion.
+        min: La direccion de la empresa tiene que tener como minimo {{ limit }} caracteres.
+
+    ciudad:
+        notBlank: Tiene que indicar una ciudad.
+        min: El nombre de la ciudad tiene que tener como minimo {{ limit }} caracteres.
+
+    provincia:
+        notBlank: Tiene que indicar una provincia.
+        min: El nombre de la provincia tiene que tener como minimo {{ limit }} caracteres.
+
+    pais:
+        notBlank: Tiene que indicar una pais.
+        min: El nombre del pais tiene que tener como minimo {{ limit }} caracteres.
+
+    numero: Este campo solo puede contener numeros
+
+redes:
+    name:
+        notBlank: Tiene que indicar un nombre para la red social.
+        min: El nombre de la red social tiene que tener como minimo {{ limit }} caracteres.
+        min: El nombre de la red social tiene que tener como maximo {{ limit }} caracteres.

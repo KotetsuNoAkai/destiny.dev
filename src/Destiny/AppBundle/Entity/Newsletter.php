@@ -4,9 +4,6 @@ namespace Destiny\AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -36,8 +33,8 @@ class Newsletter
 	 * @Assert\Length(
 	 *      min = 2,
 	 *      max = 100,
-	 *      minMessage = "newsletter.name.min",
-	 *      maxMessage = "newsletter.name.max"
+	 *      minMessage = "newsletter.email.min",
+	 *      maxMessage = "newsletter.email.max"
 	 * )
 	 *
 	 */
@@ -77,13 +74,13 @@ class Newsletter
 	}
 
     /**
-     * Get id
+     * Get email
      *
-     * @return integer 
+     * @return string
      */
-    public function getId()
+	public function getEmail ()
     {
-        return $this->id;
+	    return $this->email;
     }
 
     /**
@@ -100,16 +97,26 @@ class Newsletter
     }
 
     /**
-     * Get email
+     * Get id
      *
-     * @return string 
+     * @return integer
      */
-    public function getEmail()
+	public function getId ()
     {
-        return $this->email;
+	    return $this->id;
     }
 
     /**
+     * Get slug
+     *
+     * @return string
+     */
+	public function getSlug ()
+	{
+		return $this->slug;
+	}
+
+	/**
      * Set slug
      *
      * @param string $slug
@@ -123,13 +130,13 @@ class Newsletter
     }
 
     /**
-     * Get slug
+     * Get estado
      *
-     * @return string 
+     * @return boolean
      */
-    public function getSlug()
+	public function getEstado ()
     {
-        return $this->slug;
+	    return $this->estado;
     }
 
     /**
@@ -146,15 +153,14 @@ class Newsletter
     }
 
     /**
-     * Get estado
+     * Get fechaCreacion
      *
-     * @return boolean 
+     * @return \DateTime
      */
-    public function getEstado()
+	public function getFechaCreacion ()
     {
-        return $this->estado;
+	    return $this->fechaCreacion;
     }
-
 
     /**
      * Set fechaCreacion
@@ -170,13 +176,13 @@ class Newsletter
     }
 
     /**
-     * Get fechaCreacion
+     * Get fechaModificacion
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
-    public function getFechaCreacion()
+	public function getFechaModificacion ()
     {
-        return $this->fechaCreacion;
+	    return $this->fechaModificacion;
     }
 
     /**
@@ -190,15 +196,5 @@ class Newsletter
         $this->fechaModificacion = $fechaModificacion;
 
         return $this;
-    }
-
-    /**
-     * Get fechaModificacion
-     *
-     * @return \DateTime 
-     */
-    public function getFechaModificacion()
-    {
-        return $this->fechaModificacion;
     }
 }

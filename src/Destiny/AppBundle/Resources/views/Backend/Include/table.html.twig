@@ -25,7 +25,7 @@
 
 			<td>
 				<a href="{{ path('editBackend',{'entity':entity,'element':element.slug}) }}">
-					{{ element }}
+					{{ element | raw }}
 				</a>
 			</td>
 			{% for type in listElements %}
@@ -55,7 +55,7 @@
 				{% endif %}
 			{% endfor %}
 
-			<td>{{ element.fechaModificacion | date ('d/m/y d:i') }}</td>
+			<td>{{ element.fechaModificacion | date ('d/m/y H:i') }}</td>
 			<td><a href="{{ path('changeStatusBackend',{'entity':entity,'element':element.slug}) }}">
 					{% if element.estado == true %}
 						<i class="fa fa-check element-active"></i>

@@ -6,63 +6,14 @@ namespace Destiny\AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class BackendController
  * @package Destiny\AppBundle\Controller
- *
+ * @Route("backend")
  */
 class BackendController extends Controller
 {
-
-	public function getElements($entity, $element = null,$type = 'list',$group=null)
-	{
-		$em = $this->getDoctrine ()->getManager ();
-
-		$repository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
-
-
-		switch ($type){
-			case ($type === 'list'):
-					return (method_exists ($repository, 'getAll'))
-						? $repository->getAll ()
-						: $repository->findAll ();
-			break;
-
-			case ($type === 'one'):
-				return (method_exists ($repository, 'getOne'))
-					? $repository->getOne ($element)
-					: $repository->findOneBySlug ($element);
-				break;
-
-			case ($type === 'group'):
-				return $repository->getAllByGroup ($group);
-				break;
-		}
-
-
-
-	}
-
-	public function listElements($entity)
-	{
-		$em = $this->getDoctrine ()->getManager ();
-
-		if (method_exists($this->get($entity),'groups'))
-		{
-			$groups = $this->get($entity)->groups();
-			foreach($groups as $group)
-			{
-				$list[$group] = $this->getElements($entity,null,'group',$group);
-			}
-
-		}else{
-			$list = $this->getElements($entity);
-		}
-
-		return $list;
-	}
 
 	/**
 	 * @Route("/",name="indexBackend")
@@ -94,6 +45,50 @@ class BackendController extends Controller
 			]);
 	}
 
+	public function listElements ($entity)
+	{
+		$em = $this->getDoctrine ()->getManager ();
+
+		if (method_exists ($this->get ($entity), 'groups')) {
+			$groups = $this->get ($entity)->groups ();
+			foreach ($groups as $group) {
+				$list[ $group ] = $this->getElements ($entity, NULL, 'group', $group);
+			}
+
+		} else {
+			$list = $this->getElements ($entity);
+		}
+
+		return $list;
+	}
+
+	public function getElements ($entity, $element = NULL, $type = 'list', $group = NULL)
+	{
+		$em = $this->getDoctrine ()->getManager ();
+
+		$repository = $em->getRepository ('DestinyAppBundle:' . ucfirst ($entity));
+
+
+		switch ($type) {
+			case ($type === 'list'):
+				return (method_exists ($repository, 'getAll'))
+					? $repository->getAll ()
+					: $repository->findAll ();
+				break;
+
+			case ($type === 'one'):
+				return (method_exists ($repository, 'getOne'))
+					? $repository->getOne ($element)
+					: $repository->findOneBySlug ($element);
+				break;
+
+			case ($type === 'group'):
+				return $repository->getAllByGroup ($group);
+				break;
+		}
+
+
+	}
 
 	/**
 	 * @Route("/create/{entity}/", name="createBackend")
@@ -114,7 +109,7 @@ class BackendController extends Controller
 
 			if (($formulario->isSubmitted ()) && ($formulario->isValid ())) {
 				if (method_exists ($new, 'upload')) $new->upload ();
-				if (method_exists ($this->get ($entity), 'preCreateSave')) $this->get ($entity)->preCreateSave ($new);
+				if (method_exists ($this->get ($entity), 'postCreate')) $this->get ($entity)->postCreate ($new);
 				$em->persist ($new);
 				$em->flush ();
 
@@ -122,7 +117,7 @@ class BackendController extends Controller
 
 				$this->get ('session')->getFlashBag()->set ('success', [
 					'title' => $traductor->trans ('flash.edit.title'),
-					'message' => $traductor->trans ('flash.edit.message', ['entidad' => $edit])
+					'message' => $traductor->trans ('flash.edit.message', ['entidad' => $new])
 				]);
 			}
 
@@ -169,8 +164,9 @@ class BackendController extends Controller
 
 		$formulario->handleRequest($request);
 
-		if (($formulario->isSubmitted()) && ($formulario->isValid())) {
+		if (($formulario->isSubmitted ()) && ($formulario->isValid ())) {
 			if (method_exists ($edit, 'upload')) $edit->upload();
+			if (method_exists ($this->get ($entity), 'postEdit')) $this->get ($entity)->postEdit ($edit);
 			$em->persist ($edit);
 			$em->flush ();
 
@@ -211,6 +207,7 @@ class BackendController extends Controller
 		if (NULL != $delete) {
 
 			if ($this->get ($entity)->isDeletable ($delete) === TRUE) {
+				if (method_exists ($this->get ($entity), 'postDelete')) $this->get ($entity)->postDelete ($delete);
 				$em->remove ($delete);
 				$em->flush ();
 

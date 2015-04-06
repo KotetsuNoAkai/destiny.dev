@@ -4,10 +4,10 @@ namespace Destiny\AppBundle\Form;
 
 
 
-use Destiny\AppBundle\Entity\Newsletter;
 use Destiny\AppBundle\Entity\Usuarios;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Translation\Translator;
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -21,19 +21,19 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  */
 class UsuariosType extends AbstractType
 {
-	protected $em, $translator;
+	protected $em, $translator, $container;
 
-	public function __construct (EntityManager $em, Translator $translator)
+	public function __construct (EntityManager $em, Translator $translator, Container $container)
 	{
 		$this->em = $em;
 		$this->translator = $translator;
+		$this->container = $container;
 
 	}
 
 	/**
 	 * @param FormBuilderInterface $builder
 	 * @param array                $options
-	 *  * @ TODO Añadir y traducir campos
 	 */
 	public function buildForm (FormBuilderInterface $builder, array $options)
 	{
@@ -72,13 +72,6 @@ class UsuariosType extends AbstractType
 		return $usuario;
 	}
 
-	public function preCreateSave($usuario)
-	{
-		$usuario->setEstado(false);
-
-		return $usuario;
-	}
-
 	public function isDeletable ($usuario)
 	{
 		if (in_array('ROLE_ROOT',$usuario->getRoles()))
@@ -105,5 +98,24 @@ class UsuariosType extends AbstractType
 	public function groups ()
 	{
 		return ['ROLE_NORMALUSER' =>'Normal','ROLE_ROOT' => 'Root'];
+	}
+
+	public function postEdit ($usuario)
+	{
+		$this->container->get ('email')->enviarEmailUsuario ('edit', $usuario);
+	}
+
+	public function postCreate ($usuario)
+	{
+		$usuario->setEstado (FALSE);
+		$this->container->get ('email')->enviarEmailUsuario ('create', $usuario);
+
+		return $usuario;
+	}
+
+	public function postDelete ($usuario)
+	{
+
+		$this->container->get ('email')->enviarEmailUsuario ('delete', $usuario);
 	}
 }

@@ -42,7 +42,7 @@ class IdiomasType extends AbstractType
 			->add ('archivo', 'file', ['label' => $this->translator->trans ('idiomas.form.file')])
 			->add ('estado', 'choice', ['label' => $this->translator->trans ('idiomas.form.status'),
 				'choices' => [TRUE => $this->translator->trans ('form.status.active'),
-					FALSE => $this->translator->trans ('form.status.active')]]);
+					FALSE => $this->translator->trans ('form.status.desactive')]]);
 	}
 
 	/**

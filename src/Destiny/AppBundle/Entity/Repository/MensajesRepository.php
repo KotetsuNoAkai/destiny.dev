@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class MensajesRepository extends EntityRepository
 {
+	public function getMensajesSinLeer()
+	{
+		$em = $this->getEntityManager();
+
+		$query = $em->createQueryBuilder();
+
+		return $query->select(['m'])
+			->from('DestinyAppBundle:Mensajes', 'm')
+			->where($query->expr()->eq('m.estado',':estado'))
+			->setParameters(['estado' => false])
+			->getQuery()->getResult();
+	}
 }

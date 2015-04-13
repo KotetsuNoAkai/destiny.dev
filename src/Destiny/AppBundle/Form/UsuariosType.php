@@ -64,10 +64,10 @@ class UsuariosType extends AbstractType
 		return 'destiny_appbundle_usuarios';
 	}
 
-	//@TODO Por defecto, los usuarios son NORMAL_USERS
 	public function newEntity ()
 	{
 		$usuario = new Usuarios();
+		$usuario->setRoles(['ROLE_USER']);
 
 		return $usuario;
 	}

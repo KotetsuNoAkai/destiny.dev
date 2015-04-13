@@ -20,19 +20,19 @@ newsletter:
         email: Tiene que indicar un email valido.
         notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
-        min: El email tiene que tener como maximo {{ limit }} caracteres.
+        max: El email tiene que tener como maximo {{ limit }} caracteres.
 
 messages:
     email:
         email: Tiene que indicar un email valido.
         notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
-        min: El email tiene que tener como maximo {{ limit }} caracteres.
+        max: El email tiene que tener como maximo {{ limit }} caracteres.
 
     subject:
         notBlank: Tiene que indicar un asunto.
         min: El asunto tiene que tener como minimo {{ limit }} caracteres.
-        min: El asunto tiene que tener como maximo {{ limit }} caracteres.
+        max: El asunto tiene que tener como maximo {{ limit }} caracteres.
 
     body:
         min: El cuerpo del mensaje tiene que tener como minimo {{ limit }} caracteres.
@@ -46,35 +46,35 @@ usuarios:
         email: Tiene que indicar un email valido.
         notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
-        min: El email tiene que tener como maximo {{ limit }} caracteres.
+        max: El email tiene que tener como maximo {{ limit }} caracteres.
 
     username:
         notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
-        min: El email tiene que tener como maximo {{ limit }} caracteres.
+        max: El email tiene que tener como maximo {{ limit }} caracteres.
 
 
     password:
         notBlank: Tiene que indicar un password.
         min: El password tiene que tener como minimo {{ limit }} caracteres.
-        min: El password tiene que tener como maximo {{ limit }} caracteres.
+        max: El password tiene que tener como maximo {{ limit }} caracteres.
 
 empresa:
     name:
         notBlank: Tiene que indicar un nombre de la empresa.
         min: El nombre de la empresa tiene que tener como minimo {{ limit }} caracteres.
-        min: El nombre de la empresa tiene que tener como maximo {{ limit }} caracteres.
+        max: El nombre de la empresa tiene que tener como maximo {{ limit }} caracteres.
 
 
     email:
         notBlank: Tiene que indicar un email.
         min: El email tiene que tener como minimo {{ limit }} caracteres.
-        min: El email tiene que tener como maximo {{ limit }} caracteres.
+        max: El email tiene que tener como maximo {{ limit }} caracteres.
 
     slogan:
         notBlank: Tiene que indicar un eslogan para la empresa.
         min: El eslogan de la empresa tiene que tener como minimo {{ limit }} caracteres.
-        min: El eslogan de la empresa tiene que tener como maximo {{ limit }} caracteres.
+        max: El eslogan de la empresa tiene que tener como maximo {{ limit }} caracteres.
 
     mensajeBloqueo:
         notBlank: Tiene que indicar un mensaje bloqueo para la empresa.
@@ -114,4 +114,58 @@ redes:
     name:
         notBlank: Tiene que indicar un nombre para la red social.
         min: El nombre de la red social tiene que tener como minimo {{ limit }} caracteres.
-        min: El nombre de la red social tiene que tener como maximo {{ limit }} caracteres.
+        max: El nombre de la red social tiene que tener como maximo {{ limit }} caracteres.
+
+adjunto:
+    name:
+        notblank: Tiene que indicar un nombre para el adjunto.
+        min: El nombre del adjunto tiene que tener como minimo {{ limit }} caracteres.
+        max: El idioma nombre del adjunto que tener como maximo {{ limit }} caracteres.
+        notnumber: El nombre del adjunto no puede contener un numero.
+
+    alt:
+        notblank: Tiene que indicar un texto alternativo para el adjunto.
+        min: El texto alternativo del adjunto tiene que tener como minimo {{ limit }} caracteres.
+        max: El texto alternativo nombre del adjunto que tener como maximo {{ limit }} caracteres.
+        notnumber: El texto alternativo del adjunto no puede contener un numero.
+
+    descripcion:
+        notblank: Tiene que indicar una descripción para el adjunto.
+        min: La descripción del adjunto tiene que tener como minimo {{ limit }} caracteres.
+        max: La descripción nombre del adjunto que tener como maximo {{ limit }} caracteres.
+
+videos:
+    name:
+        notblank: Tiene que indicar un nombre para el video.
+        min: El nombre del video tiene que tener como minimo {{ limit }} caracteres.
+        max: El nombre del video que tener como maximo {{ limit }} caracteres.
+        notnumber: El nombre del video no puede contener un numero.
+
+    alt:
+        notblank: Tiene que indicar un texto alternativo para el video.
+        min: El texto alternativo del video tiene que tener como minimo {{ limit }} caracteres.
+        max: El texto alternativo nombre del video que tener como maximo {{ limit }} caracteres.
+        notnumber: El texto alternativo del video no puede contener un numero.
+
+    descripcion:
+        notblank: Tiene que indicar una descripción para el video.
+        min: La descripción del video tiene que tener como minimo {{ limit }} caracteres.
+        max: La descripción del video que tener como maximo {{ limit }} caracteres.
+
+imagenes:
+    name:
+        notblank: Tiene que indicar un nombre para la imagen.
+        min: El nombre de la imagen tiene que tener como minimo {{ limit }} caracteres.
+        max: El nombre de la imagen que tener como maximo {{ limit }} caracteres.
+        notnumber: El nombre de la imagen no puede contener un numero.
+
+    alt:
+        notblank: Tiene que indicar un texto alternativo para la imagen.
+        min: El texto alternativo de la imagen tiene que tener como minimo {{ limit }} caracteres.
+        max: El texto alternativo de la imagen que tener como maximo {{ limit }} caracteres.
+        notnumber: El texto alternativo de la imagen no puede contener un numero.
+
+    descripcion:
+        notblank: Tiene que indicar una descripción para la imagen.
+        min: La descripción de la imagen tiene que tener como minimo {{ limit }} caracteres.
+        max: La descripción de la imagen que tener como maximo {{ limit }} caracteres.

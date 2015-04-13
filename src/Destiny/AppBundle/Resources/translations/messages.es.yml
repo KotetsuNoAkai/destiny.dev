@@ -1,3 +1,17 @@
+dashboard:
+    saludo: Hola,
+    status: Online
+    gotfront: Ir a la web
+    logout: Salir
+    project: Destiny Dashboard
+    name: Destiny project
+    download: Descargar
+
+    login:
+        user: Nombre de usuario/ email
+        password: Contraseña
+        remember: Recordarme
+        lost: He perdido mis contraseña
 flash:
     edit:
         title: ¡Se ha editado correctamente!
@@ -51,13 +65,34 @@ flash:
         title: ¡Se ha añadido el usuario Administrador!
         message: Se ha finalizado la instalacion y se ha enviado un email con los datos de la instalacion.
 
+    instalacion:
+        title: ¡Bienvenido al sistema Destiny!
+        message: Se va a iniciar la instalacion de la web, al finalizar se enviará un email con los datos.
+
 instalacion:
-    datosEmpresa: PASO 1: Datos de la empresa
-    datosContacto: PASO 2: Datos fisicos de la empresa
-    datosRedesSociales: Paso 3: Redes sociales
-    idioma: Paso 4: Idioma de la web
-menu:
-    dashboard: Inicio
+    datosEmpresa:
+        titulo: PASO 1: Datos de la empresa.
+        info: Indique los datos de la web.
+
+    datosContacto:
+        titulo: PASO 2: Datos fisicos de la empresa.
+        info: Indique los datos fisicos de la empresa.
+
+    datosRedesSociales:
+        titulo: PASO 3: Redes sociales.
+        info: Indique los datos de las redes sociales de empresa.
+
+    idioma:
+        titulo: PASO 4: Idioma de la web.
+        info: Indique el idioma de la web.
+
+    usuario:
+        titulo: PASO 5: Creacion del administrador.
+        info: Rellene los datos del usuario de administración de la web.
+
+portada:
+    backend:
+        title: Inicio
     settings: Configuracion
     languages: Idiomas
 
@@ -70,41 +105,57 @@ form:
     status: Estado
     edit: Editar
     delete: Borrar
-
-    status:
-        active: Activo
-        desactive: Desactivado
+    save: Guardar
+    active: Activo
+    desactive: Desactivado
 list:
     caution: Precaucion
     predelte: ¿Esta usted seguro de borrar este elemento?
 
 idiomas:
     form:
-      name: Nombre del Idioma
-      isoCode: Codigo ISO
-      file: Bandera
-      status: Estado
-
+        name: Nombre del Idioma
+        isoCode: Codigo ISO
+        file: Bandera
+        status: Estado
 
     list:
-      isoCode: Codigo Iso
-      flag: Bandera
-      default: Defecto
-      status: Activo
+        name: Idioma
+        isoCode: Codigo Iso
+        flag: Bandera
+        default: Defecto
+        status: Activo
+        new: Nuevo idioma
+        back: Volver
+        save: Guardar idioma
+        title: Idomas
+        image: Bandera actual
+        edit: Editando
 
 newsletter:
     list:
         name: Email
         status: Activo
+        title: Newsletter
+        new: Añadir email
+        back: Volver
+        save: Garudar email
 
     form:
       email: Email
 
 mensajes:
     list:
+        title: Mensajes
         name: Email
         subject: Asunto
         status: Leido
+        noread: No hay mensajes sin leer.
+        cant: Hay %cantidad% mensaje sin leer.
+        all: Leer todos los mensajes.
+        back: Volver
+        save: Guardar
+        edit: Actual
 
     form:
         email: Email
@@ -116,6 +167,11 @@ usuarios:
     list:
         name: Nombre de usuario
         status: Activo
+        title: Usuarios
+        new: Nuevo usuario
+        edit: Actual
+        save: Guardar usuario
+        back: Volver
 
     form:
         email: Email
@@ -130,10 +186,30 @@ empresa:
         estado: Estado
         mensajeBloqueo: Mensaje de bloqueo de la web
 
+configuration:
+    list:
+        title: Configuración
+        language: Idiomas
+        redesSociales: Redes Sociales
+        contacto: Datos Fisicos
+        web: Datos de la web
+        content: Contenido
+        contentMedia: Gestión de archivos
+        menus: Getión de menús
+        sections: Gestión de secciones
+        pdf: Adjuntos (PDF)
+        images: Imagenes
+        slider: Galerias
+        videos: Videos(Youtube)
+        users: Usuarios
+        newsletter: Newsletter
+
 empresaRedesSociales:
     list:
+        title: Redes sociales
         name: Red social
         status: Estado
+        new: Añadir red social
     form:
         nombre: Red social
         icono: Icono FontAwesome
@@ -144,6 +220,10 @@ empresaContacto:
     list:
         name: Nombre
         status: Visible
+        title: Datos fisicos de la empresa
+        edit: Actual
+        back: Volver
+        save: Guardar datos
 
     form:
         nombre: Nombre
@@ -155,3 +235,60 @@ empresaContacto:
         movil: Movil
         fax: Fax
         estado: Visible
+
+empresaWeb:
+    list:
+        title: Datos de la web
+        edit: Actual
+        back: Volver
+        save: Guaradar
+        image: Logo actual
+
+adjuntos:
+    list:
+        title: Adjuntos (PDF)
+        new: Añadir PDF
+        name: PDF
+        status: Estado
+        back: Volver
+        save: Guardar
+        file: Archivo
+
+    form:
+        name: Nombre del archivo
+        alt: Texto Alt
+        description: Descripción del archivo
+        file: PDF
+        status: Estado
+
+videos:
+    list:
+        title: Videos
+        name: Nombre
+        status: Estado
+        new: Nuevo video
+        back: Volver
+        save: Guardar video
+
+    form:
+        name: Nombre
+        alt: Alt
+        description: Descripcion
+        url: Url del video (Youtube)
+        status: Estado
+
+imagenes:
+    list:
+        title: Imagenes
+        name: Nombre
+        status: Estado
+        new: Nueva imagen
+        back: Volver
+        save: Guardar imagen
+
+    form:
+        name: Nombre
+        alt: Alt
+        description: Descripcion
+        file: Imagen
+        status: Estado

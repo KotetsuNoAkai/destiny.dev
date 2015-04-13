@@ -32,8 +32,8 @@ class EmpresaRedesSocialesType extends AbstractType
 			->add ('iconoFA', 'text', ['label' => $this->translator->trans ('empresaRedesSociales.form.icono')])
 			->add ('url', 'url', ['label' => $this->translator->trans ('empresaRedesSociales.form.url')])
 			->add ('estado', 'choice', ['label' => $this->translator->trans ('empresaRedesSociales.form.estado'),
-				'choices' => [TRUE => $this->translator->trans ('form.status.active'),
-					FALSE => $this->translator->trans ('form.status.desactive')]]);
+				'choices' => [TRUE => $this->translator->trans ('form.active'),
+					FALSE => $this->translator->trans ('form.desactive')]]);
 	}
 
 	/**
@@ -72,4 +72,6 @@ class EmpresaRedesSocialesType extends AbstractType
 
 		return TRUE;
 	}
+
+
 }

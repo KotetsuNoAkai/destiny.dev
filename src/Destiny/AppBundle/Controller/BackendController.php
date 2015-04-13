@@ -6,7 +6,7 @@ namespace Destiny\AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 /**
  * Class BackendController
  * @package Destiny\AppBundle\Controller
@@ -15,37 +15,9 @@ use Symfony\Component\HttpFoundation\Request;
 class BackendController extends Controller
 {
 
-	/**
-	 * @Route("/",name="indexBackend")
-	 */
-	public function indexAction ()
-	{
-		//@Todo Personalizar la salida de la portada.
-		return $this->render ('DestinyAppBundle:Backend:index.html.twig',
-			[
 
-			]);
-	}
 
-	/**
-	 * @Route("/list/{entity}/",name="listBackend")
-	 */
-	public function listBackendAction ($entity)
-	{
-
-		return $this->render ('DestinyAppBundle:Backend:list.html.twig',
-			[
-				'entity' => $entity,
-				'list' => $this->listElements($entity),
-				'group' => (method_exists($this->get($entity),'groups')) ? $this->get($entity)->groups() : false,
-				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
-					? $this->get ($entity)->listElements () : NULL,
-				'cantCreate' => (property_exists($this->get ($entity), 'cantCreate'))
-					? True : false,
-			]);
-	}
-
-	public function listElements ($entity)
+	protected function listElements ($entity)
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
@@ -62,7 +34,7 @@ class BackendController extends Controller
 		return $list;
 	}
 
-	public function getElements ($entity, $element = NULL, $type = 'list', $group = NULL)
+	protected function getElements ($entity, $element = NULL, $type = 'list', $group = NULL)
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
@@ -91,6 +63,36 @@ class BackendController extends Controller
 	}
 
 	/**
+	 * @Route("/",name="portadaBackend")
+	 */
+	public function indexAction ()
+	{
+		//@Todo Personalizar la salida de la portada.
+		return $this->render ('DestinyAppBundle:Backend:index.html.twig',
+			[
+
+			]);
+	}
+
+	/**
+	 * @Route("/list/{entity}/",name="listBackend")
+	 */
+	public function listBackendAction ($entity)
+	{
+
+		return $this->render ('DestinyAppBundle:Backend:list.html.twig',
+			[
+				'entity' => $entity,
+				'list' => $this->listElements($entity),
+				'group' => (method_exists($this->get($entity),'groups')) ? $this->get($entity)->groups() : false,
+				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
+					? $this->get ($entity)->listElements () : NULL,
+				'cantCreate' => (method_exists($this->get ($entity), 'cantCreate'))
+					? True : false,
+			]);
+	}
+
+	/**
 	 * @Route("/create/{entity}/", name="createBackend")
 	 *
 	 */
@@ -98,7 +100,7 @@ class BackendController extends Controller
 	{
 		$em = $this->getDoctrine ()->getManager ();
 
-		if (!(property_exists($this->get ($entity), 'cantCreate')))
+		if (!(method_exists($this->get ($entity), 'cantCreate')))
 		{
 
 			$new = $this->get (strtolower ($entity))->newEntity ();
@@ -128,7 +130,10 @@ class BackendController extends Controller
 					'list' => $this->listElements($entity),
 					'group' => (method_exists($this->get($entity),'groups')) ? true : false,
 					'listElements' => (method_exists ($this->get ($entity), 'listElements'))
-						? $this->get ($entity)->listElements () : NULL
+						? $this->get ($entity)->listElements () : NULL,
+					'cantCreate' => (!(method_exists($this->get ($entity), 'cantCreate'))) ? true : false,
+					'notList' => (property_exists($this->get ($entity), 'notList'))
+						? True : false
 				]);
 
 		} else{
@@ -161,6 +166,7 @@ class BackendController extends Controller
 		{
 			$formulario->add ('archivo', 'file', ['required' => FALSE]);
 		}
+		if (method_exists ($this->get($entity), 'preEdit')) $this->get($entity)->preEdit($edit);
 
 		$formulario->handleRequest($request);
 
@@ -186,7 +192,11 @@ class BackendController extends Controller
 				'list' => $this->listElements($entity),
 				'group' => (method_exists($this->get($entity),'groups')) ? true : false,
 				'listElements' => (method_exists ($this->get ($entity), 'listElements'))
-								   ? $this->get ($entity)->listElements () : NULL
+								   ? $this->get ($entity)->listElements () : NULL,
+				'cantCreate' => (method_exists($this->get ($entity), 'cantCreate'))
+					? True : false,
+				'notList' => (property_exists($this->get ($entity), 'notList'))
+					? True : false
 			]);
 	}
 

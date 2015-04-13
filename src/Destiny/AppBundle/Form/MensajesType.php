@@ -21,7 +21,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 class MensajesType extends AbstractType
 {
 	protected $em, $translator;
-	protected $cantCreate;
+
 
 	public function __construct (EntityManager $em, Translator $translator)
 	{
@@ -72,9 +72,11 @@ class MensajesType extends AbstractType
 		return $mensaje;
 	}
 
-	public function preCreateSave($mensaje)
+	public function preEdit($mensaje)
 	{
-		$mensaje->setEstado(False);
+		$mensaje->setEstado(true);
+		$this->em->persist ($mensaje);
+		$this->em->flush ();
 
 		return $mensaje;
 	}
@@ -98,6 +100,17 @@ class MensajesType extends AbstractType
 				$this->translator->trans ('mensajes.list.subject') => 'asunto'
 			];
 
+	}
+
+	public function getMensajesSinLeer()
+	{
+		 return $this->em->getRepository('DestinyAppBundle:Mensajes')->getMensajesSinLeer();
+	}
+
+	public function cantCreate ($mensaje)
+	{
+
+		return TRUE;
 	}
 
 

@@ -4,6 +4,10 @@ services:
         class: Destiny\AppBundle\Services\EmailService
         arguments: ["@swiftmailer.mailer","@templating","@doctrine.orm.entity_manager","@service_container"]
 
+    datosEmpresa:
+        class: Destiny\AppBundle\Services\DatosEmpresaService
+        arguments: ["@doctrine.orm.entity_manager","@service_container"]
+
     destiny_appbundle.form.type.idiomas:
         class: Destiny\AppBundle\Form\IdiomasType
         arguments: ["@doctrine.orm.entity_manager", "@translator.default"]
@@ -59,3 +63,27 @@ services:
             - { name: form.type }
 
     empresaRedesSociales: "@destiny_appbundle.form.type.empresa.redes.sociales"
+
+    destiny_appbundle.form.type.adjuntos:
+        class: Destiny\AppBundle\Form\AdjuntosType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    adjuntos: "@destiny_appbundle.form.type.adjuntos"
+
+    destiny_appbundle.form.type.videos:
+        class: Destiny\AppBundle\Form\VideosType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    videos: "@destiny_appbundle.form.type.videos"
+
+    destiny_appbundle.form.type.imagenes:
+        class: Destiny\AppBundle\Form\ImagenesType
+        arguments: ["@doctrine.orm.entity_manager", "@translator.default","@service_container"]
+        tags:
+            - { name: form.type }
+
+    imagenes: "@destiny_appbundle.form.type.imagenes"

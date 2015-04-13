@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68bcb9b0-a836-4441-9c7d-5e8c51e97c05" name="Default" comment="31/03/2015&#10;&#10;BackendController:&#10;&#10;- Ahora, en ListAction, se puede personalizar la salida de los elmentos. Estoy hay que indicarlo en el servicio de la entidad.&#10;&#10;- Ahora se puede cambiar el elemento por defecto, el cual ni se puede desactivar ni borrar.&#10;&#10;messages.es.yml:&#10;&#10;- Añadidos los mensajes de error de borrar y de cambio de estado.&#10;- Mensaje de cambio del elemento por defecto.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaContactoLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaWebLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/bloqueada.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/contacto.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/instalacion.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/instalacionBase.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/usuario.html.twig" />
-      <change type="MOVED" beforePath="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Form\MessagesType.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php" />
+    <list default="true" id="68bcb9b0-a836-4441-9c7d-5e8c51e97c05" name="Default" comment="06/04/2015&#10;&#10;Emails: Envio de emails de contacto, usuarios (crear, editar y borrar) e instalacion de la web.&#10;Empresa: Datos de la web de la empresa, fisicos/contacto y de las redes sociales.&#10;Instalacion: Cuando no hay datos datos de la empresa te permite crear los datos de la empresa, un usuario ROOT y un idioma por defecto.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Adjuntos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/backend/css/AdminLTE.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Services/DatosEmpresaService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Imagenes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Videos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/backend/js/app.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Security/login.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/asset/backend/css/skin-blue.min.css" />
+      <change type="DELETED" beforePath="C:\wamp\www\destiny.dev\web\asset\backend\css\dashboard.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/DestinyAppBundle.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/DestinyAppBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/IdiomasRepository.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/IdiomasRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/MensajesRepository.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/MensajesRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MessagesLoader.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MessagesLoader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Newsletter.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Newsletter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuarios.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuarios.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/UsuariosType.php" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Form/UsuariosType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/index.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/instalacionBase.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/instalacionBase.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/asset/backend/css/login.css" afterPath="$PROJECT_DIR$/web/asset/backend/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml" afterPath="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml" />
@@ -52,6 +73,14 @@
       <PATH_ELEMENT>
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - destiny@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="destiny" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
   </component>
@@ -136,77 +165,38 @@
           <favorite_root url="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/NewsletterLoader.php" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
         </favorite_root>
       </favorite_root>
+      <favorite_root url="file://$USER_HOME$/Downloads/AdminLTE-2.0.4/AdminLTE-2.0.4/dist/css/AdminLTE.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InstalaccionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/InstalaccionController.php">
+      <file leaf-file-name="Imagenes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Imagenes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.846154" vertical-offset="3346" max-vertical-offset="4574">
-              <caret line="218" column="42" selection-start-line="218" selection-start-column="42" selection-end-line="218" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="7038">
+              <caret line="83" column="34" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="34" />
               <folding>
-                <element signature="e#48#93#0#PHP" expanded="true" />
-                <element signature="e#886#915#1#PHP" expanded="true" />
-                <element signature="e#1007#1019#1#PHP" expanded="true" />
-                <element signature="e#1656#1673#0#PHP" expanded="true" />
-                <element signature="e#1743#1797#0#PHP" expanded="true" />
-                <element signature="e#2855#2877#0#PHP" expanded="true" />
-                <element signature="e#3036#3098#0#PHP" expanded="true" />
-                <element signature="e#4420#4485#0#PHP" expanded="true" />
-                <element signature="e#4596#4635#1#PHP" expanded="true" />
-                <element signature="e#5997#6018#0#PHP" expanded="true" />
-                <element signature="e#6163#6218#0#PHP" expanded="true" />
-                <element signature="e#6329#6368#1#PHP" expanded="true" />
-                <element signature="e#7194#7233#1#PHP" expanded="true" />
-                <element signature="e#7834#7846#1#PHP" expanded="true" />
-                <element signature="e#7879#7934#0#PHP" expanded="true" />
+                <element signature="e#44#76#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailService.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php">
+      <file leaf-file-name="validators.es.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="868" max-vertical-offset="1986">
-              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-              <folding>
-                <element signature="e#6#83#0#PHP" expanded="true" />
-                <element signature="e#123#185#0#PHP" expanded="true" />
-                <element signature="e#993#1029#0#PHP" expanded="true" />
-                <element signature="e#1289#1331#0#PHP" expanded="true" />
-                <element signature="e#1649#1695#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instalacion.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/instalacion.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="592">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2890" max-vertical-offset="2924">
+              <caret line="170" column="40" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contacto.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/contacto.html.twig">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="864">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuario.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/usuario.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="798">
-              <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.06331471" vertical-offset="0" max-vertical-offset="1676">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -225,57 +215,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/NewsletterType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MessagesLoader.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MenssagesType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MenssagesLoader.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MessagesType.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Mensajes.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/UserLoader.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/UsuariosLoader.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuario.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/UserType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuarios.php" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/UsuariosRepository.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/usuario.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/UsuariosType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Newsletter.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaWebType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/bloqueada.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaWebLoader.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaContactoLoader.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Newsletter.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuarios.php" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/FrontendController.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaWebRepository.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaWeb.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaContactoType.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaContacto.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresa.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaContacto.php" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaRedesSocial.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/idiomaDefecto.html.twig" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/instalacionBase.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/portada.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/contacto.html.twig" />
-        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresa.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaRedesSocial.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaContacto.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/IdiomasRepository.php" />
         <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/InstalaccionController.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/crearUsuarioAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/idiomaDefecto.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Services/DatosEmpresaService.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DestinyAppBundle.php" />
+        <option value="$PROJECT_DIR$/web/asset/backend/css/login.css" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/MensajesRepository.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MessagesLoader.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig" />
+        <option value="$PROJECT_DIR$/web/app_dev.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaContactoRepository.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaWebRepository.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaWebType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaContactoType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php" />
+        <option value="$PROJECT_DIR$/web/asset/backend/css/AdminLTE.min.css" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/AdjuntosType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/VideosType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaWeb.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Adjuntos.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Videos.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Form/ImagenesType.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Imagenes.php" />
+        <option value="$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -287,10 +277,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1278" />
+    <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -315,6 +305,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,141 +355,20 @@
               <option name="myItemId" value="Destiny" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Email" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destiny.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Destiny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
+    <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="js.buildTools.gulp.node_interpreter" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="SearchEverywhereHistoryKey" value="Empresa&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/EmpresaContacto.php&#10;bac&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Controller/BackendController.php&#10;security&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/security.yml&#10;ser&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/config/services.yml&#10;usu&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Repository/UsuariosRepository.php&#10;me&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;new&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Newsletter.php&#10;mess&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;rout&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing.yml&#10;config&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;security.yml&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/security.yml&#10;App&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php&#10;back&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Controller/BackendController.php&#10;list&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig&#10;news&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Newsletter.php&#10;backe&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Controller/BackendController.php&#10;idio&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/IdiomasType.php&#10;I&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/IdiomasType.php&#10;das&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/dashboard.css&#10;ba&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/backendBase.html.twig&#10;.css&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/dashboard.css&#10;ess&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;idiomas&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Idiomas.php&#10;con&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;para&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/parameters.yml&#10;css&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/dashboard.css&#10;app&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php&#10;parameters&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/parameters.yml&#10;menu&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/Backend/includes/backendMenuLeft.html.twig&#10;idiom&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Idiomas.php&#10;routing.yml&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing.yml&#10;routing_&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing_dev.yml&#10;config_&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config_dev.yml&#10;appke&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php" />
+    <property name="SearchEverywhereHistoryKey" value="back&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/backendBase.html.twig&#10;backe&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/backendBase.html.twig&#10;videos&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/VideosType.php&#10;edi&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig&#10;css&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/AdminLTE.min.css&#10;bac&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/backendBase.html.twig&#10;mess&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;empresa&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Repository/EmpresaContactoRepository.php&#10;redes&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Repository/EmpresaRedesSocialesRepository.php&#10;app_dev.php&#9;null&#9;null&#10;mes&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;backend&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Controller/BackendController.php&#10;ad&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/AdminLTE.min.css&#10;mensa&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/MensajesType.php&#10;cç&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;config.y&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;parameters&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/parameters.yml&#10;usu&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/UsuariosType.php&#10;empresaR&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php&#10;sec&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/security.yml&#10;Empresa&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/EmpresaContacto.php&#10;security&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/security.yml&#10;ser&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/config/services.yml&#10;me&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;new&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Newsletter.php&#10;rout&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing.yml&#10;config&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;security.yml&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/security.yml&#10;App&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php&#10;list&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig&#10;news&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Newsletter.php&#10;idio&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/IdiomasType.php&#10;I&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Form/IdiomasType.php&#10;das&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/dashboard.css&#10;ba&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/backendBase.html.twig&#10;.css&#9;FILE&#9;file://C:/wamp/www/destiny.dev/web/asset/backend/css/dashboard.css&#10;ess&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/translations/messages.es.yml&#10;idiomas&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Idiomas.php&#10;con&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config.yml&#10;para&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/parameters.yml&#10;app&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php&#10;menu&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Resources/views/Backend/includes/backendMenuLeft.html.twig&#10;idiom&#9;FILE&#9;file://C:/wamp/www/destiny.dev/src/Destiny/AppBundle/Entity/Idiomas.php&#10;routing.yml&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing.yml&#10;routing_&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/routing_dev.yml&#10;config_&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/config/config_dev.yml&#10;appke&#9;FILE&#9;file://C:/wamp/www/destiny.dev/app/AppKernel.php" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
@@ -509,11 +379,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Resources\views\Email" />
-      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Resources\views" />
-      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\DataFixtures\ORM" />
-      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Form" />
       <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Entity" />
+      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Resources\views" />
+      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Services" />
+      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\Resources\views\Email" />
+      <recent name="C:\wamp\www\destiny.dev\src\Destiny\AppBundle\DataFixtures\ORM" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\destiny.dev\web\asset\backend\js" />
+      <recent name="C:\wamp\www\destiny.dev\web\asset\backend\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -524,24 +398,21 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
-      <option name="name" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="6ef87e52-3282-438c-992e-8e0acf81bf79" server_name="Destiny">
+    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
+      <option name="name" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -551,6 +422,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="6ef87e52-3282-438c-992e-8e0acf81bf79" server_name="Destiny">
       <method />
     </configuration>
     <list size="0" />
@@ -614,7 +488,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427831990701</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="06/04/2015&#10;&#10;Emails: Envio de emails de contacto, usuarios (crear, editar y borrar) e instalacion de la web.&#10;Empresa: Datos de la web de la empresa, fisicos/contacto y de las redes sociales.&#10;Instalacion: Cuando no hay datos datos de la empresa te permite crear los datos de la empresa, un usuario ROOT y un idioma por defecto.">
+      <created>1428353848822</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1428353848822</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -638,31 +518,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1278" height="982" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23705408" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.49885058" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796317" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22653721" sideWeight="0.50057536" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1954023" sideWeight="0.49942464" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28398058" sideWeight="0.38204834" order="3" side_tool="true" content_ui="tabs" x="485" y="57" width="309" height="869" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266745" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3094959" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19271445" sideWeight="0.49942464" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28398058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1683087" sideWeight="0.52582157" order="3" side_tool="true" content_ui="tabs" x="485" y="57" width="309" height="869" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28398058" sideWeight="0.6179517" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922825" sideWeight="0.49885058" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2557377" sideWeight="0.4719864" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2557377" sideWeight="0.5280136" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796317" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -685,7 +565,8 @@
     <MESSAGE value="Backend Controller:&#10;&#10;En NewAction y editAction funcionan al 100%, permiten subir archivos y se renderizan de manera independiente cada imput del formulario. Al terminar de crear, te redirecciona a editAction.&#10;&#10;editCreate.html.twig:&#10;&#10;Vista unica para editar y crear elementos. Los mensajes son diferentes si estamos en editAction y newAction.&#10;&#10;Creado el servicio:&#10;&#10;Idiomas-&gt; encargado de crear el formulario y de generar una nuevo objeto, para la creacion de elementos.&#10;&#10;" />
     <MESSAGE value=" 29/03/2015&#10; &#10; BackendController:&#10; &#10;- Ahora, la subida de archivos solo es obligatoria en la creacion de la entidad.&#10;- Añadida las traduciones a los mensajes FLASH.&#10;- En el caso de que en el REPOSITORIO de la entidad exista auna funcion llamada GETONE, se llama a esta, en vez de a FINDONEBYSLUG.&#10;&#10;IdiomasType:&#10;-Añadida las traducciones a la etiqueta.&#10;" />
     <MESSAGE value="31/03/2015&#10;&#10;BackendController:&#10;&#10;- Ahora, en ListAction, se puede personalizar la salida de los elmentos. Estoy hay que indicarlo en el servicio de la entidad.&#10;&#10;- Ahora se puede cambiar el elemento por defecto, el cual ni se puede desactivar ni borrar.&#10;&#10;messages.es.yml:&#10;&#10;- Añadidos los mensajes de error de borrar y de cambio de estado.&#10;- Mensaje de cambio del elemento por defecto." />
-    <option name="LAST_COMMIT_MESSAGE" value="31/03/2015&#10;&#10;BackendController:&#10;&#10;- Ahora, en ListAction, se puede personalizar la salida de los elmentos. Estoy hay que indicarlo en el servicio de la entidad.&#10;&#10;- Ahora se puede cambiar el elemento por defecto, el cual ni se puede desactivar ni borrar.&#10;&#10;messages.es.yml:&#10;&#10;- Añadidos los mensajes de error de borrar y de cambio de estado.&#10;- Mensaje de cambio del elemento por defecto." />
+    <MESSAGE value="06/04/2015&#10;&#10;Emails: Envio de emails de contacto, usuarios (crear, editar y borrar) e instalacion de la web.&#10;Empresa: Datos de la web de la empresa, fisicos/contacto y de las redes sociales.&#10;Instalacion: Cuando no hay datos datos de la empresa te permite crear los datos de la empresa, un usuario ROOT y un idioma por defecto." />
+    <option name="LAST_COMMIT_MESSAGE" value="06/04/2015&#10;&#10;Emails: Envio de emails de contacto, usuarios (crear, editar y borrar) e instalacion de la web.&#10;Empresa: Datos de la web de la empresa, fisicos/contacto y de las redes sociales.&#10;Instalacion: Cuando no hay datos datos de la empresa te permite crear los datos de la empresa, un usuario ROOT y un idioma por defecto." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -697,267 +578,351 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/idiomaDefecto.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4456929" vertical-offset="51" max-vertical-offset="1180">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1240">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/IdiomasLoader.php">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1248">
-          <caret line="10" column="97" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.22235434" vertical-offset="0" max-vertical-offset="1062">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/UsuariosLoader.php">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/InstalaccionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.461538" vertical-offset="510" max-vertical-offset="1677">
-          <caret line="14" column="123" selection-start-line="14" selection-start-column="123" selection-end-line="14" selection-end-column="123" />
+        <state vertical-scroll-proportion="-0.11241611" vertical-offset="305" max-vertical-offset="4642">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DestinyAppBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30706075" vertical-offset="0" max-vertical-offset="813">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25123152" vertical-offset="0" max-vertical-offset="932">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/asset/backend/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8834646" vertical-offset="408" max-vertical-offset="1604">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/24b295ea/7a860c0e-3cba-407b-8289-9b4aac9e21d1/destiny..empresa_redessociales">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1973">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5078616" vertical-offset="901" max-vertical-offset="1996">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Mensajes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="204" max-vertical-offset="6086">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="57" selection-end-column="20" />
+        <state vertical-scroll-proportion="-1.9934427" vertical-offset="1437" max-vertical-offset="5880">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/NewsletterType.php">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/MessagesLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9786885" vertical-offset="153" max-vertical-offset="2140">
-          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5147541" vertical-offset="315" max-vertical-offset="10844">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Usuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33442622" vertical-offset="136" max-vertical-offset="2735">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/UsuariosType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9165644" vertical-offset="1140" max-vertical-offset="2753">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Newsletter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71100163" vertical-offset="145" max-vertical-offset="3975">
-          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2052546" vertical-offset="306" max-vertical-offset="2275">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.807693" vertical-offset="1029" max-vertical-offset="2343">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="95" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/UsuariosRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33497536" vertical-offset="34" max-vertical-offset="1272">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1120">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/MensajesRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="873">
+        <state vertical-scroll-proportion="-8.153846" vertical-offset="26" max-vertical-offset="1052">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/CacheClearer/ChainCacheClearer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23433584" vertical-offset="0" max-vertical-offset="1597">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Services/DatosEmpresaService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1491228" vertical-offset="0" max-vertical-offset="1240">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.064968154" vertical-offset="0" max-vertical-offset="1193">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23488773" vertical-offset="0" max-vertical-offset="1055">
+          <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaRedesSocialesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1036">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/IdiomasRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="873">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/bloqueada.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26771653" vertical-offset="255" max-vertical-offset="1043">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1538463" vertical-offset="1540" max-vertical-offset="8293">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="117" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5622047" vertical-offset="578" max-vertical-offset="1638">
-          <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85057473" vertical-offset="43" max-vertical-offset="1884">
-          <caret line="33" column="110" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
-          <folding>
-            <element signature="e#42#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaRedesSociales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16584565" vertical-offset="1" max-vertical-offset="4893">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaWebLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5533662" vertical-offset="20" max-vertical-offset="1136">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="e#55#95#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/DataFixtures/ORM/EmpresaContactoLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8374384" vertical-offset="85" max-vertical-offset="1221">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding>
-            <element signature="e#55#100#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="643">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6923075" vertical-offset="430" max-vertical-offset="1412">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="60" selection-end-column="15" />
-          <folding>
-            <element signature="e#957#1747#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34731543" vertical-offset="5216" max-vertical-offset="6376">
-          <caret line="340" column="20" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaWebType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="102" max-vertical-offset="1888">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding>
-            <element signature="e#42#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="1530" max-vertical-offset="6342">
-          <caret line="116" column="52" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
-          <folding>
-            <element signature="e#2223#2289#0#PHP" expanded="false" />
-            <element signature="e#3914#3985#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="1240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaWebRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9162561" vertical-offset="37" max-vertical-offset="1255">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <element signature="e#433#462#0#PHP" expanded="true" />
-            <element signature="e#722#751#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-17.884615" vertical-offset="96" max-vertical-offset="1410">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Repository/EmpresaContactoRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1051">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="1240">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/portada.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46867168" vertical-offset="0" max-vertical-offset="1274">
+          <caret line="22" column="14" selection-start-line="10" selection-start-column="8" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/crearUsuarioAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21303259" vertical-offset="0" max-vertical-offset="1240">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="864">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="917">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/UsuariosType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02852349" vertical-offset="170" max-vertical-offset="2415">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="-0.5168919" vertical-offset="306" max-vertical-offset="2530">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/NewsletterType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3445946" vertical-offset="204" max-vertical-offset="2037">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaRedesSocialesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="153" max-vertical-offset="1799">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaContactoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="238" max-vertical-offset="1952">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05743243" vertical-offset="0" max-vertical-offset="626">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaContacto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="7962">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/MensajesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.76923" vertical-offset="682" max-vertical-offset="2684">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/asset/backend/css/AdminLTE.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31135532" vertical-offset="68612" max-vertical-offset="69328">
+          <caret line="4046" column="20" selection-start-line="4046" selection-start-column="20" selection-end-line="4046" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/IdiomasType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.038462" vertical-offset="1303" max-vertical-offset="2267">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/BackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.461538" vertical-offset="902" max-vertical-offset="3525">
+          <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/listContent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1060">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/VideosType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42553192" vertical-offset="272" max-vertical-offset="2142">
+          <caret line="36" column="87" selection-start-line="36" selection-start-column="87" selection-end-line="36" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45801526" vertical-offset="99" max-vertical-offset="1687">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaWeb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.884615" vertical-offset="2169" max-vertical-offset="7766">
-          <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="2193" max-vertical-offset="7956">
+          <caret line="157" column="5" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaWebType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40425533" vertical-offset="187" max-vertical-offset="2108">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Idiomas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="289" max-vertical-offset="8568">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Videos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82616824" vertical-offset="1632" max-vertical-offset="6145">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="129" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/AdjuntosType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.423077" vertical-offset="595" max-vertical-offset="2176">
+          <caret line="85" column="5" selection-start-line="59" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="2304">
+          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/backendBase.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="2618" max-vertical-offset="4993">
+          <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/editCreate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="1020" max-vertical-offset="2282">
+          <caret line="81" column="73" selection-start-line="81" selection-start-column="73" selection-end-line="81" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/ImagenesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.653847" vertical-offset="408" max-vertical-offset="1912">
+          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Backend/Include/table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615" vertical-offset="255" max-vertical-offset="2792">
+          <caret line="37" column="80" selection-start-line="37" selection-start-column="80" selection-end-line="37" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4263" max-vertical-offset="5776">
+          <caret line="286" column="28" selection-start-line="286" selection-start-column="28" selection-end-line="286" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Adjuntos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.29787233" vertical-offset="646" max-vertical-offset="7650">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="86" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/Imagenes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="7038">
+          <caret line="83" column="34" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="34" />
           <folding>
             <element signature="e#44#76#0#PHP" expanded="true" />
           </folding>
@@ -966,205 +931,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/validators.es.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7055118" vertical-offset="1099" max-vertical-offset="2590">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2303" max-vertical-offset="3698">
+          <caret line="170" column="40" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Form/EmpresaContactoType.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862069" vertical-offset="459" max-vertical-offset="1935">
-          <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-          <folding>
-            <element signature="e#42#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresa.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10429448" vertical-offset="0" max-vertical-offset="917">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding>
-            <element signature="e#12#55#0#Twig" expanded="true" />
-            <element signature="e#178#222#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/crearUsuarioAdmin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="943">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaContacto.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="985">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#55#0#Twig" expanded="true" />
-            <element signature="e#396#440#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Entity/EmpresaContacto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077" vertical-offset="2142" max-vertical-offset="8231">
-          <caret line="160" column="12" selection-start-line="160" selection-start-column="12" selection-end-line="160" selection-end-column="12" />
-          <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="272" max-vertical-offset="1240">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.06331471" vertical-offset="0" max-vertical-offset="1676">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/datosEmpresaRedesSocial.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#55#0#Twig" expanded="true" />
-            <element signature="e#480#524#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1164">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/instalacionBase.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64662576" vertical-offset="0" max-vertical-offset="1359">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Instalaccion/idiomaDefecto.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1091">
-          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-          <folding>
-            <element signature="e#468#512#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Frontend/portada.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56319016" vertical-offset="0" max-vertical-offset="1291">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/FrontendController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31288344" vertical-offset="0" max-vertical-offset="1189">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/translations/messages.es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="1950">
-          <caret line="51" column="105" selection-start-line="51" selection-start-column="105" selection-end-line="51" selection-end-column="105" />
-          <folding>
-            <element signature="n#menu#0;n#!!top" expanded="false" />
-            <element signature="n#form#0;n#!!top" expanded="false" />
-            <element signature="n#list#0;n#!!top" expanded="false" />
-            <element signature="n#idiomas#0;n#!!top" expanded="false" />
-            <element signature="n#newsletter#0;n#!!top" expanded="false" />
-            <element signature="n#mensajes#0;n#!!top" expanded="false" />
-            <element signature="n#usuarios#0;n#!!top" expanded="false" />
-            <element signature="n#empresa#0;n#!!top" expanded="false" />
-            <element signature="n#empresaRedesSociales#0;n#!!top" expanded="false" />
-            <element signature="n#empresaContacto#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/usuario.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/instalacion.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="841">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Resources/views/Email/contacto.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="864">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Controller/InstalaccionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.846154" vertical-offset="3346" max-vertical-offset="4574">
-          <caret line="218" column="42" selection-start-line="218" selection-start-column="42" selection-end-line="218" selection-end-column="42" />
-          <folding>
-            <element signature="e#48#93#0#PHP" expanded="true" />
-            <element signature="e#886#915#1#PHP" expanded="true" />
-            <element signature="e#1007#1019#1#PHP" expanded="true" />
-            <element signature="e#1656#1673#0#PHP" expanded="true" />
-            <element signature="e#1743#1797#0#PHP" expanded="true" />
-            <element signature="e#2855#2877#0#PHP" expanded="true" />
-            <element signature="e#3036#3098#0#PHP" expanded="true" />
-            <element signature="e#4420#4485#0#PHP" expanded="true" />
-            <element signature="e#4596#4635#1#PHP" expanded="true" />
-            <element signature="e#5997#6018#0#PHP" expanded="true" />
-            <element signature="e#6163#6218#0#PHP" expanded="true" />
-            <element signature="e#6329#6368#1#PHP" expanded="true" />
-            <element signature="e#7194#7233#1#PHP" expanded="true" />
-            <element signature="e#7834#7846#1#PHP" expanded="true" />
-            <element signature="e#7879#7934#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destiny/AppBundle/Services/EmailService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="868" max-vertical-offset="1986">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#83#0#PHP" expanded="true" />
-            <element signature="e#123#185#0#PHP" expanded="true" />
-            <element signature="e#993#1029#0#PHP" expanded="true" />
-            <element signature="e#1289#1331#0#PHP" expanded="true" />
-            <element signature="e#1649#1695#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

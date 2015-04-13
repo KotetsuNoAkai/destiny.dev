@@ -16,6 +16,7 @@ use FOS\UserBundle\Model\User as BaseUser;
  * @ORM\Table(name="usuario")
  * @ORM\Entity(repositoryClass="Destiny\AppBundle\Entity\Repository\UsuariosRepository")
  * @UniqueEntity("email")
+ * @UniqueEntity("username")
  */
 
 class Usuarios extends BaseUser

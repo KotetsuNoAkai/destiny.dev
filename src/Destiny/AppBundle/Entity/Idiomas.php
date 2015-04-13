@@ -35,7 +35,7 @@ class Idiomas
 	 * @Assert\NotBlank(message="language.name.notblank")
 	 * @Assert\Length(
 	 *      min = 2,
-	 *      max = 10,
+	 *      max = 50,
 	 *      minMessage = "language.name.min",
 	 *      maxMessage = "language.name.max"
 	 * )
@@ -178,6 +178,11 @@ class Idiomas
 
 		// limpia la propiedad «file» ya que no la necesitas más
 		$this->archivo = null;
+	}
+
+	public function getType()
+	{
+		return 'image';
 	}
 
 	public function setArchivo(UploadedFile $archivo)

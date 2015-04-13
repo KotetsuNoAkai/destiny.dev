@@ -1,70 +1,90 @@
 {% extends "DestinyAppBundle::backendBase.html.twig" %}
 
-    {% block backendTitle %}
-	    {{ entity | capitalize }}
-	    {% if app.request.attributes.get('_route') == 'editBackend' %}
-		    <a class="btn btn-success pull-right" href="{{ path('createBackend',{'entity':entity}) }}">
-			    <i class="fa fa-plus-circle"></i>
-
-			    Nuevo idioma
-		    </a>
-	    {% endif %}
-    {% endblock %}
-
+{% set newEntity =  entity~'.list.new'  %}
+{% set editEntity =  entity~'.list.edit'  %}
+{% set saveEntity =  entity~'.list.save'  %}
+{% set back =  entity~'.list.back'  %}
 {% block backendBody %}
+	<div class="col-md-12">
 	<h2 class="sub-header">
 		{% if app.request.attributes.get('_route') == 'editBackend' %}
-			Editando: {{ form.vars.value }}
+			{{ editEntity | trans}}: {{ form.vars.value }}
 		{% else %}
-			Nuevo Idioma
+			{{ newEntity | trans }}
 		{% endif %}
 		<a class="btn btn-success pull-right" href="{{ path('listBackend',{'entity':entity}) }}">
 			<i class="fa fa-chevron-circle-left"></i>
 
-			Volver
+			{{ back | trans}}
 		</a>
 	</h2>
-		<div class="col-sm-6">
-
-
-			{% include('@DestinyApp/Backend/listContent.html.twig' ) %}
-
-
-		</div>
-
-		<form action="#" class="form-horizontal col-sm-6" role="form" method="post" {{ form_enctype(form) }}>
-
-			{% for field in form.children if field.vars.name != '_token' %}
-				<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
-					{% set field_label = entity_fields[field.vars.name]['label']|default(null) %}
-					{{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-12 control-label' } }) }}
-					<div class="col-sm-12">
-						{{ form_widget (field,{'attr':{'class':'form-control'}}) }}
-						{%  if form_errors(field)  != '' %}
-							<br>
-							<div class="alert alert-danger fade in">
-								<a data-dismiss="alert" class="pull-right" href="" type="button">
-									<i class="fa fa-times"></i>
-								</a>
-									<strong>Error</strong><br>
-								{{ form_errors(field)}}
-
-							</div>
-
-						{%  endif %}
-					</div>
-				</div>
-			{% endfor %}
-
-			{{ form_rest(form) }}
-			<button type="submit" class="btn btn-success pull-right" value="Submit" >Submit</button>
-		</form>
-	<div class="clearfix"></div>
-	{%  if (form.vars.value.webPath is defined) and (form.vars.value.webPath != null)  %}
-	<div class="col-md-6 pull-right">
-		<h5 class="sub-header">Imagen Actual</h5>
-		<img class="img-responsive" src="{{ asset(form.vars.value.webPath) }}">
+		<hr>
 	</div>
+	{% if notList != true %}
+		<div class="col-sm-6">
+			{% include('@DestinyApp/Backend/listContent.html.twig' ) %}
+		</div>
 	{% endif %}
+	<div class="col-md-6">
+		<div class="box box-primary">
+
+
+			<form action="" class="form-horizontal" role="form" method="post" {{ form_enctype(form) }}>
+				<div class="box-body clearfix">
+				{% for field in form.children if field.vars.name != '_token' %}
+					<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
+						{% set field_label = entity_fields[field.vars.name]['label']|default(null) %}
+						{{ form_label(field, field_label|trans, { label_attr: { class: 'col-sm-12 control-label' } }) }}
+						<div class="col-sm-12">
+							{{ form_widget (field,{'attr':{'class':'form-control'}}) }}
+							{%  if form_errors(field)  %}
+								<br>
+								<div class="alert alert-danger fade in">
+									<a data-dismiss="alert" class="pull-right" href="" type="button">
+										<i class="fa fa-times"></i>
+									</a>
+										<strong>Error</strong><br>
+									{{ form_errors(field)}}
+
+								</div>
+
+							{%  endif %}
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+
+
+				<div class="box-footer clearfix">
+				<button type="submit" class="btn btn-success pull-right" value="Submit" >{{ saveEntity | trans }}</button>
+				</div>
+				{{ form_rest(form) }}
+				</form>
+			<div class="clearfix"></div>
+			<hr>
+		{%  if (form.vars.value.webPath is defined) and (form.vars.value.webPath != null)  %}
+			{% if form.vars.value.type == 'pdf' %}
+
+			<div class="pull-right">
+				<a class="btn btn-warning" target="_blank" href="{{ asset(form.vars.value.webPath) }}">
+					<i class="fa fa-arrow-circle-o-down"></i>
+					{{ form.vars.value }}
+				</a>
+			</div>
+		{% elseif  form.vars.value.type == 'image'%}
+		<div class="pull-left">
+			{% set imageEntity =  entity~'.list.image'  %}
+			<h5 class="sub-header">{{ imageEntity | trans }}</h5>
+			<img class="img-responsive" src="{{ asset(form.vars.value.webPath) }}">
+		</div>
+			{% endif %}
+		{% endif %}
+	{% if (form.vars.value.type == 'video') and (form.vars.value.url != '')  %}
+		<div class="pull-right">
+			<iframe width="400" height="315" src="https://www.youtube.com/embed/{{ form.vars.value.url }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+	{% endif %}
+		</div>
+	</div>
 
 {% endblock %}

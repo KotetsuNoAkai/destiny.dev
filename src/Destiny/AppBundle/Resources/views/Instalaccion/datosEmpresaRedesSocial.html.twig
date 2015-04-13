@@ -1,0 +1,31 @@
+{% extends "DestinyAppBundle::instalacionBase.html.twig" %}
+
+{% block backendTitle %}{{ 'instalacion.datosRedesSociales.titulo' | trans }}{% endblock %}
+
+{% block backendBody %}
+
+	<h2>{{ 'instalacion.datosRedesSociales.info' | trans }}</h2>
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped active" role="progressbar"
+		     aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+			<span class="sr-only">50% Complete</span>
+		</div>
+	</div>
+	{% include 'DestinyAppBundle:Instalaccion:form.html.twig' %}
+	<div class="col-md-6">
+		<ul>
+			<li>{{ 'empresa.form.nombre' | trans }}: {{ empresa }}</li>
+			<li>{{ 'empresa.form.slogan' | trans }}: {{ empresa.slogan }}</li>
+			<li>{{ 'empresaContacto.form.direccion' }}: {{ contacto.direccionCompleta }} </li>
+			<li>{{ 'empresa.form.archivo' | trans }}: <img src="{{ asset( empresa.webPath ) }}" width="20%"></li>
+			{% for red in redes %}
+			<li><a href="{{ red.url }}">{{ red | raw }}</a> </li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="col-md-12">
+	<a href="{{ path('empresaIdiomaDefecto',{'empresa':empresa.slug,'contacto':contacto.slug}) }}"
+	   class="btn btn-success pull-right">Continuar <i class="fa fa-arrow-right"></i></a>
+	</div>
+{% endblock %}

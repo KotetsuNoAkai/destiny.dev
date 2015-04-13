@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class IdiomasRepository extends EntityRepository
 {
+	public function findOneBySlug($idioma)
+	{
+		$em = $this->getEntityManager();
+
+		$query = $em->createQueryBuilder();
+
+		return $query->select(['i'])
+			->from('DestinyAppBundle:Idiomas', 'i')
+			->where($query->expr()->eq('i.isoCode',':idioma'))
+			->setParameters(['idioma' => $idioma])
+			->getQuery()->getOneOrNullResult();
+	}
 }

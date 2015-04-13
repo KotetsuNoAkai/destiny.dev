@@ -1,4 +1,4 @@
-<form action="#" class="form-horizontal col-sm-6" role="form" method="post" {{ form_enctype(form) }}>
+{{ form_start(form, {'method': 'GET'}) }}
 
 	{% for field in form.children if field.vars.name != '_token' %}
 		<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
@@ -22,6 +22,5 @@
 		</div>
 	{% endfor %}
 
-	{{ form_rest(form) }}
-	<button type="submit" class="btn btn-success pull-right" value="Submit">Submit</button>
-</form>
+	<button type="submit" class="btn btn-success pull-right" value="Submit">{{ 'form.save' | trans }}</button>
+{{ form_end(form) }}

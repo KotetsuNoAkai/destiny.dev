@@ -64,7 +64,7 @@ class EmailService
 
 		$email = \Swift_Message::newInstance ()
 			->setSubject ('')
-			->setTo ($usuario->getEmail ())
+			->setTo ($usuario->getEmail (),$empresa->getEmail())
 			->setBody ($this->twig
 				->render ('DestinyAppBundle:Email:instalacion.html.twig',
 					['usuario' => $usuario,

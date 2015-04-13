@@ -21,7 +21,7 @@ class MessagesLoader extends AbstractFixture implements  FixtureInterface, Order
 		    $mensaje = new Mensajes();
 
 		    $mensaje->setEmail('user'.$i.'@localhost.dev');
-		    $mensaje->setEstado(true);
+		    $mensaje->setEstado(false);
 		    $mensaje->setAsunto('Asunto '.$i);
 		    $mensaje->setCuerpo('Cuerpo '.$i);
 

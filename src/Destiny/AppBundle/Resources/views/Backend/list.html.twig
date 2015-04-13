@@ -1,17 +1,9 @@
 {% extends "DestinyAppBundle::backendBase.html.twig" %}
 
-    {% block backendTitle %}
-	    {{ entity | capitalize }}
 
-	    {% if cantCreate == false %}
-	    <a class="btn btn-success pull-right" href="{{ path('createBackend',{'entity':entity}) }}">
-		    <i class="fa fa-plus-circle"></i>
-
-		    Nuevo idioma
-	    </a>
-	    {% endif %}
-    {% endblock %}
 
 {% block backendBody %}
-{% include('@DestinyApp/Backend/listContent.html.twig' ) %}
+	<div class="col-md-12">
+	{% include('@DestinyApp/Backend/listContent.html.twig' ) %}
+	</div>
 {% endblock %}

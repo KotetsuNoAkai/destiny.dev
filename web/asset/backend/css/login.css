@@ -1,7 +1,7 @@
 body {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #eee;
+    background-color: #FFFFFF;
 }
 
 .logo{
@@ -10,7 +10,13 @@ body {
 }
 
 .login-boton{
+    background-color: #3C8DBC;
+    border-color: #3C8DBC;
+}
 
+.login-boton:hover{
+    background-color: #205EBC;
+    border-color: #205EBC;
 }
 
 .form-signin {
@@ -46,4 +52,8 @@ body {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.social-links{
+    text-align: center;
 }

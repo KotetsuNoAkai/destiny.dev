@@ -10,7 +10,7 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body class="{% block bodyclass %}{% endblock %}">
         {% block body %}{% endblock %}
         <script src="{{ asset('asset/common/js/jquery.js') }}"></script>
         <script src="{{ asset('asset/common/js/jquery-ui.js') }}"></script>
